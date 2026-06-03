@@ -1,0 +1,6 @@
+{
+  "name": "The Grand Archive",
+  "description": "An elegant, editorial blog and interactive repository exploring history's most iconic literature. Features curated profiles on Adventures of Huckleberry Finn and The Odyssey, alongside an AI Literary Sage that summarizes any piece of classic literature.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
