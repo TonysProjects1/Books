@@ -1048,5 +1048,374 @@ export const preCuratedBooks: BookSummary[] = [
         significance: "The central psychological tenet behind cognitive behavioral therapy and modern mindfulness practices."
       }
     ]
+  },
+  {
+    id: "wealth-of-nations",
+    title: "The Wealth of Nations",
+    author: "Adam Smith",
+    era: "1776",
+    genre: "Classical Economics & Moral Philosophy",
+    oneSentenceSummary: "An epoch-making treatise on economics proposing that market competition driven by individual self-interest naturally produces societal prosperity and divisions of labor.",
+    introduction: "First published in 1776, Adam Smith’s magnum opus laid the conceptual foundation for modern free-market capitalism, analyzing the productivity of division of labor, the concept of the invisible hand, and the structural folly of mercantilist restrictions.",
+    themes: [
+      {
+        name: "The Invisible Hand and Self-Regulating Markets",
+        description: "Self-interest naturally yields public prosperity. By seeking their own gain, individuals are led by an invisible hand to promote an end which was no part of their intention.",
+        quote: "By pursuing his own interest he frequently promotes that of the society more effectually than when he really intends to promote it."
+      },
+      {
+        name: "The Division of Labor",
+        description: "Breaking down tasks drives geometric increases in national productivity, forming the base of universal wealth expansion.",
+        quote: "The greatest improvement in the productive powers of labour... seem to have been the effects of the division of labour."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Pin-Factory Paradigm",
+        act: "Book I, Chapter 1",
+        description: "A humble description of how ten specialized pin-makers manufacture tens of thousands of pins daily, illustrating how specialized labor geometrically scales production.",
+        impact: "Became the universal industrial template for scale, automation, and labor optimization."
+      },
+      {
+        title: "The Demolition of Mercantilism",
+        act: "Book IV",
+        description: "A systematic intellectual takedown of imperial-state monopolies and gold-hoarding regulations.",
+        impact: "Shifted global state strategies from bullion protectionism to productive trade exchange."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "The Rational Producer",
+        role: "The Market Catalyst",
+        archetype: "The Self-Interested Actor",
+        analysis: "The actor who works to satisfy their self-interest and, in doing so, serves public demand much better than any state-guided mandate."
+      },
+      {
+        name: "The Intervening Sovereign",
+        role: "The Well-Meaning Distorter",
+        archetype: "The Central Regulator",
+        analysis: "The state authority whose well-intentioned market controls and monopolies disrupt natural price signals and create capital misallocation."
+      }
+    ],
+    quotes: [
+      {
+        text: "It is not from the benevolence of the butcher, the brewer, or the baker that we expect our dinner, but from their regard to their own interest.",
+        speaker: "Adam Smith",
+        significance: "The definitive thesis of modern capitalist economics, shifting morality from self-denial to mutual exchange."
+      },
+      {
+        text: "No regulation of commerce can increase the quantity of industry in any society beyond what its capital can maintain.",
+        speaker: "Adam Smith",
+        significance: "Underlines the natural limits of legislative intervention over organic capital accumulation."
+      }
+    ]
+  },
+  {
+    id: "general-theory",
+    title: "The General Theory of Employment, Interest and Money",
+    author: "John Maynard Keynes",
+    era: "1936",
+    genre: "Macroeconomics & Public Policy",
+    oneSentenceSummary: "A revolutionary macroeconomic treatise arguing that supply does not automatically create its own demand, making state-led fiscal intervention crucial to cure chronic economic depressions.",
+    introduction: "Written in the shadow of the Great Depression, Keynes's revolutionary book completely upended classical laissez-faire economics, demonstrating that markets can get trapped in prolonged equilibria of underemployment and low aggregate demand.",
+    themes: [
+      {
+        name: "The Critical Role of Aggregate Demand",
+        description: "Direct consumption and investment drive employment, not just production capacity. Low consumer confidence leads directly to structural unemployment.",
+        quote: "The outstanding faults of the economic society in which we live are its failure to provide for full employment and its arbitrary and inequitable distribution of wealth and incomes."
+      },
+      {
+        name: "Animal Spirits and Market Uncertainty",
+        description: "Human decisions are guided by psychological optimism and emotional waves, defying purely mathematical models.",
+        quote: "Our decision to do something positive can only be taken as the result of animal spirits—a spontaneous urge to action rather than inaction."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Liquidity Trap Demonstration",
+        act: "Chapter 15",
+        description: "When interest rates slump so low that investors hoard idle cash instead of lending, rendering monetary policy completely toothless.",
+        impact: "Justifies direct, aggressive state fiscal intervention when conventional banking tools break down."
+      },
+      {
+        title: "The Paradox of Thrift Exposition",
+        act: "Chapter 19",
+        description: "Revealing that when every individual collectively hoards cash to survive a recession, aggregate demand collapses, triggering deeper distress.",
+        impact: "Exposes the divergence of household rational thrift and macroeconomic aggregate health."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "The Animal Spirit Investor",
+        role: "The Emotional Engine",
+        archetype: "The Speculative Capitalist",
+        analysis: "The speculative actor who makes decisions based on waves of spontaneous enthusiasm and expectations rather than cold-blooded calculations."
+      },
+      {
+        name: "The Intervening Fiscal State",
+        role: "The Demand Generator",
+        archetype: "The Sovereign Steward",
+        analysis: "The centralized actor who must step in with public works and deficit spending when private-sector demand collapses."
+      }
+    ],
+    quotes: [
+      {
+        text: "The difficulty lies not so much in developing new ideas as in escaping from old ones...",
+        speaker: "John Maynard Keynes",
+        significance: "Summarizes the immense intellectual inertia built into classical economic orthodoxies."
+      },
+      {
+        text: "In the long run we are all dead. Economists set themselves too easy, too useless a task if in tempestuous seasons they can only tell us that when the storm is past the ocean is flat again.",
+        speaker: "John Maynard Keynes",
+        significance: "A direct challenge to classical models that advise patience and market self-correction during periods of catastrophic collapse."
+      }
+    ]
+  },
+  {
+    id: "art-of-war",
+    title: "The Art of War",
+    author: "Sun Tzu",
+    era: "~5th Century BC",
+    genre: "Military Strategy & Core Philosophy",
+    oneSentenceSummary: "The definitive ancient manual on conflict, advising that the grandest victories are those won without firing a single shot, using deception, speed, and deep adaptability.",
+    introduction: "Attributed to the ancient Chinese general Sun Tzu, this thirteen-chapter classic is not just a tactical field guide, but a profound philosophical exploration of psychological leverage, informational asymmetry, and resource-conserving victory.",
+    themes: [
+      {
+        name: "Victory through Deception and Psychological Domination",
+        description: "Crafting illusions to disorient rivals and capture their will without physical battle, avoiding costly attrition conflicts.",
+        quote: "He who wins every battle is not truly great; he who breaks the enemy's resistance without a fight is master."
+      },
+      {
+        name: "Adaptability like Water",
+        description: "Strategy must have no fixed, rigid shape; it must conform completely to the surrounding terrain and the enemy's disposition.",
+        quote: "In war, the way is to avoid what is strong and to strike at what is weak... Water shapes its course according to the nature of the ground."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Sublime Victory of Subjugating without Battle",
+        act: "Chapter 3",
+        description: "Laying down the highest strategic achievement—breaking the enemy's resistance and conquering states without shedding blood.",
+        impact: "Elevated strategy from base slaughter to a sublime, high-level game of direct neurological containment."
+      },
+      {
+        title: "The Formless Tactical Array",
+        act: "Chapter 6",
+        description: "Explaining that the pinnacle of strategic posturing is to possess no visible layout at all, rendering the army immune to the plans of espionage.",
+        impact: "Introduced the concept of absolute asymmetric warfare and non-attributive operations."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "The Formless Commander",
+        role: "The Serene Strategist",
+        archetype: "The Mindful Tactician",
+        analysis: "The serene, enigmatic master who reads circumstances with absolute clarity, striking only when the odds guarantee victory."
+      },
+      {
+        name: "The Arrogant Combatant",
+        role: "The Overconfident Rival",
+        archetype: "The Predictable Force",
+        analysis: "The headstrong rival who relies on brute strength, rendering them highly vulnerable to strategic tricks and informational traps."
+      }
+    ],
+    quotes: [
+      {
+        text: "All warfare is based on deception. Hence, when we are able to attack, we must seem unable; when using our forces, we must appear inactive...",
+        speaker: "Sun Tzu",
+        significance: "Exposes the psychological core of strategic maneuvers, prioritizing perception over physical deployment."
+      },
+      {
+        text: "In the midst of chaos, there is also opportunity.",
+        speaker: "Sun Tzu",
+        significance: "Encourages leaders to maintain conceptual flexibility, spotting structural entries when adversaries fall into disorder."
+      }
+    ]
+  },
+  {
+    id: "human-action",
+    title: "Human Action",
+    author: "Ludwig von Mises",
+    era: "1949",
+    genre: "Austrian Economics & Praxeology",
+    tag: "Tony's List",
+    oneSentenceSummary: "An exhaustive defense of free-market capitalism based on praxeology—the systematic, a priori study of purposeful human behavior and subjective valuation.",
+    introduction: "Ludwig von Mises’s monumental treatise is the philosophical peak of the Austrian School of economics. Mises rejects mathematical modeling and positivism, arguing instead that economics is a deductive branch of human action, driven by subjective, individual decisions and coordinate price signals.",
+    themes: [
+      {
+        name: "Praxeology as Deductive Science",
+        description: "True economic principles can be derived logically from the basic axiom that humans act purposefully to swap lesser states for preferred states.",
+        quote: "Action is will put into operation and transformed into an agency, is aiming at ends and goals."
+      },
+      {
+        name: "The Subjectivity of Value",
+        description: "Value is not an intrinsic property of goods or labor, but resides entirely in the individual mind of the acting consumer.",
+        quote: "Value is not in the things, but in the evaluating subject."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Impossibility of Economic Calculation under Socialism",
+        act: "Chapter 26",
+        description: "A systematic proof that without market prices for capital goods, planners cannot evaluate opportunity costs, guaranteeing absolute structural waste.",
+        impact: "Formed the fundamental theoretical critique against centrally-planned economies."
+      },
+      {
+        title: "The Unmasking of Credit Expansion Cycles",
+        act: "Chapter 20",
+        description: "Detailing how central banks artificially pumping cheap money triggers misallocations of capital (malinvestment), leading inevitably to severe economic busts.",
+        impact: "Established the cornerstone of Austrian Business Cycle theory, warning against artificial interest suppression."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "The Acting Individual",
+        role: "The Rational Agent",
+        archetype: "The Subjective Evaluator",
+        analysis: "A purposeful human being acting rationally to remove personal uneasiness under conditions of incomplete knowledge."
+      },
+      {
+        name: "The Central Planner",
+        role: "The Blind Bureaucrat",
+        archetype: "The Fragile Organizer",
+        analysis: "The tragic bureaucrat attempting to plan society while blinded by the absence of clean market price signals."
+      }
+    ],
+    quotes: [
+      {
+        text: "Human action is purposeful behavior. Or we may say: Action is will put into operation and transformed into an agency...",
+        speaker: "Ludwig von Mises",
+        significance: "Establishes the absolute starting point for all subsequent Austrian economic reasoning."
+      },
+      {
+        text: "There is no means of avoiding the final collapse of a boom brought about by credit expansion. The alternative is only whether the crisis should come sooner... or later, as a catastrophe of the currency system.",
+        speaker: "Ludwig von Mises",
+        significance: "A stark warning regarding modern monetary stimulus and interest-rate manipulation."
+      }
+    ]
+  },
+  {
+    id: "next-100-years",
+    title: "The Next 100 Years",
+    author: "George Friedman",
+    era: "2009",
+    genre: "Geopolitical Forecasting & Realism",
+    tag: "Tony's List",
+    oneSentenceSummary: "A provocative geopolitical forecast of the 21st century, predicting a series of tectonic global shifts, including space weapons, demographic squeezes, and the rise of new regional superpowers.",
+    introduction: "Published in 2009, geopolitical analyst George Friedman applies structural realism to lay out a highly speculative, fascinating roadmap of the next century, forecasting the rise of Poland, Turkey, and Japan as crucial global rivals while outlining a technical space-based conflict.",
+    themes: [
+      {
+        name: "Structural Geopolitics over Individual Will",
+        description: "Nations are driven by geographic imperatives and structural vulnerabilities that dictate their actions regardless of who is in office.",
+        quote: "Geopolitics is not about ideology; it's about the relentless pressures of geography."
+      },
+      {
+        name: "The Future of Space Weaponization",
+        description: "The ultimate military high-ground shifts to orbit, where hypersonic battle stations will govern oceans and transcontinental routes.",
+        quote: "The battle for Earth in the twenty-first century will be won or lost in space."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Thanksgiving Day Space Blitz",
+        act: "Chapter 11",
+        description: "A vivid science-fiction-like projection of a 21st-century global conflict beginning with a surprise hypersonic strike launched from civilian space structures.",
+        impact: "Dramatically shifts the conceptual theater of modern war from physical borders to orbital parameters."
+      },
+      {
+        title: "The Strategic Polish-Turkish Confrontation",
+        act: "Chapter 13",
+        description: "Detailing the final clash of new, post-Russian regional powers over control of Eastern Europe's trade corridors.",
+        impact: "Forecasts the eventual fragmentation of historical, Cold-War-era lines of alliance."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "The Geopolitical Imperative",
+        role: "The Immutable Force",
+        archetype: "The Geographic Constraint",
+        analysis: "The immutable geographical realities—such as deep ocean access or natural barriers—that force a state's strategic hand."
+      },
+      {
+        name: "The Rising Space Power",
+        role: "The Orbital Master",
+        archetype: "The High-Ground Strategist",
+        analysis: "Nations that dominate orbital structures, transforming the high atmosphere into the primary theater of 21st-century power."
+      }
+    ],
+    quotes: [
+      {
+        text: "Geopolitics is the study of how nations behave under structural pressure, which limits the free will of leaders far more than they would ever admit.",
+        speaker: "George Friedman",
+        significance: "Encapsulates the core structural realist philosophy, stripping away ideology in favor of systemic pressures."
+      },
+      {
+        text: "The 21st century will not be peaceful, but it will be dominated by technology and geographies that we are only now beginning to comprehend.",
+        speaker: "George Friedman",
+        significance: "A sobering reflection that continues to challenge utopian definitions of globalization."
+      }
+    ]
+  },
+  {
+    id: "1776",
+    title: "1776",
+    author: "David McCullough",
+    era: "2005",
+    genre: "Narrative History & American Revolution",
+    tag: "Tony's List",
+    oneSentenceSummary: "A vivid, deeply human chronicle detailing the perilous, near-fatal year of the American Revolution, where George Washington’s ragtag army survived absolute defeat on the edge of extinction.",
+    introduction: "In '1776', David McCullough delivers a masterful, granular, and narrative-driven account of the fateful year that birthed the United States, tracking the agonizing series of military disasters, bitter winters, and thin threads of luck that kept the rebellion alive.",
+    themes: [
+      {
+        name: "The Fragility of Democratic Revolutions",
+        description: "The American experiment was not an inevitable triumph, but a precarious sequence of disasters that came incredibly close to total obliteration.",
+        quote: "They were pushed to their absolute limits, facing an enemy that was professional, numerous, and highly disciplined."
+      },
+      {
+        name: "The Burden of Doubtful Leadership",
+        description: "George Washington’s early strategic blunders, painful learning curve, and quiet, stubborn determination to maintain morale at all costs.",
+        quote: "He was not a military genius; he was a leader who stood fast, who refused to give up hope."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Miracle Escape from Long Island",
+        act: "August 1776",
+        description: "Stranded on Brooklyn Heights with their backs to the East River, Washington’s army is saved under a perfectly timed cover of midnight silence and a sudden morning pea-soup fog.",
+        impact: "Kept the glowing spark of the revolution alive when a single British naval push would have ended the war."
+      },
+      {
+        title: "The Audacious Christmastime Crossing of the Delaware",
+        act: "December 1776",
+        description: "Plagued by low supplies and expiring enlistments, Washington launches a desperate, icy raid on Trenton, completely reviving the dying fires of American resistance.",
+        impact: "Turned a near-certain terminal surrender into a massive political surge of colonial recruits."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "George Washington",
+        role: "The Morale Anchor",
+        archetype: "The Unyielding Commander",
+        analysis: "A proud, tall, and highly self-conscious leader who starts as an inexperienced tactician but holds the revolution together through sheer character, endurance, and quiet authority."
+      },
+      {
+        name: "The Rebel Soldier",
+        role: "The Underdog",
+        archetype: "The Resilient Commoner",
+        analysis: "Farmers, clerks, and teenage boys freezing in rags, whose basic grit and stubborn loyalty became the unexpected founders of an empire."
+      }
+    ],
+    quotes: [
+      {
+        text: "The year 1776 was a time of great adversity, but also a showcase of the extraordinary resilience shown by people pushed to their absolute limits.",
+        speaker: "David McCullough",
+        significance: "Identifies the core human element as the prime mover in historical crises over static logistics."
+      },
+      {
+        text: "Nothing of any consequence was ever accomplished without effort and courage.",
+        speaker: "David McCullough (citing historical sentiment)",
+        significance: "An elegant, universal summary of the revolutionary era's grueling realities."
+      }
+    ]
   }
 ];

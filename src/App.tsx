@@ -33,7 +33,13 @@ export default function App() {
     "spqr",
     "the-republic",
     "frankenstein",
-    "meditations"
+    "meditations",
+    "wealth-of-nations",
+    "general-theory",
+    "art-of-war",
+    "human-action",
+    "next-100-years",
+    "1776"
   ];
 
   // Dark Mode State
