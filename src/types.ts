@@ -38,6 +38,7 @@ export interface BookSummary {
   quotes: IconicQuote[];
   isPreCurated?: boolean; // True for pre-curated books
   imageUrl?: string; // Cover art identifier or asset
+  tag?: string; // e.g. "Tony's List"
 }
 
 export type ThemeName = "editorial" | "midnight" | "parchment";

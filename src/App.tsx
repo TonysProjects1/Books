@@ -26,7 +26,14 @@ export default function App() {
     "fahrenheit-451",
     "to-kill-a-mockingbird",
     "zero-to-one",
-    "thinking-fast-and-slow"
+    "thinking-fast-and-slow",
+    "the-great-gatsby",
+    "war-and-peace",
+    "1984",
+    "spqr",
+    "the-republic",
+    "frankenstein",
+    "meditations"
   ];
 
   // Dark Mode State
@@ -292,6 +299,11 @@ export default function App() {
                         <BookOpen className="w-3.5 h-3.5 opacity-60" />
                         <span>{book.title}</span>
                         <span className={`text-xs font-sans font-normal ${theme.textMuted}`}>by {book.author}</span>
+                        {book.tag && (
+                          <span className="text-[9px] font-mono tracking-wider font-bold bg-amber-500/15 dark:bg-amber-400/20 text-amber-800 dark:text-amber-300 border border-amber-500/25 px-1.5 py-0.5 rounded uppercase">
+                            {book.tag}
+                          </span>
+                        )}
                       </button>
                       <div className={`flex-grow border-b border-dotted ${theme.borderDotted} mx-3`} />
                       <div className="flex items-center gap-2">
@@ -410,10 +422,18 @@ export default function App() {
 
               {/* Book Header */}
               <header className={`space-y-3 pb-6 border-b ${theme.borderLight}`}>
-                <div className={`flex items-center gap-1 border-b ${theme.borderLight} pb-2`}>
+                <div className={`flex items-center gap-1.5 border-b ${theme.borderLight} pb-2`}>
                   <span className="font-mono text-xs opacity-60 uppercase">Monograph Vol. 0{index + 1}</span>
                   <span className={`${theme.textMuted}`}>|</span>
                   <span className="font-mono text-xs opacity-60 uppercase">{book.era} Classic</span>
+                  {book.tag && (
+                    <>
+                      <span className={`${theme.textMuted}`}>|</span>
+                      <span className="text-[10px] font-mono tracking-wider font-bold bg-amber-500/15 dark:bg-amber-400/20 text-amber-800 dark:text-amber-300 border border-amber-500/25 px-1.5 py-0.5 rounded uppercase">
+                        {book.tag}
+                      </span>
+                    </>
+                  )}
                 </div>
                 
                 <h3 className={`font-serif italic font-bold text-3xl md:text-4xl ${theme.headingColor} tracking-tight`}>

@@ -620,5 +620,433 @@ export const preCuratedBooks: BookSummary[] = [
         significance: "Launches a profound critique of historical narratives and professional forecasting, which invent simple stories to explain complex, chaotic systems."
       }
     ]
+  },
+  {
+    id: "the-great-gatsby",
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    era: "1925",
+    genre: "Modernist Literature & Tragic Social Critique",
+    oneSentenceSummary: "An exquisite critique of the American Dream, where a tragic romantic searches for a green light of the past amid the reckless, hollow excess of New York's 1920s elite.",
+    introduction: "Set in the summer of 1922 on long Island's opulent Gold Coast, Fitzgerald’s masterpiece captures the fragile illusions of prosperity, the class systems that dictate American society, and the desperate, doomed effort to replicate bygone memories.",
+    themes: [
+      {
+        name: "The Decay of the American Dream",
+        description: "The dream of self-reinvention and vertical mobility is revealed as an illusion or a tragedy. Gatsby's immense wealth, accumulated through illicit channels, cannot buy entry into the aristocratic, inherited social circle of Tom and Daisy, who ultimately abandon him.",
+        quote: "So we beat on, boats against the current, borne back ceaselessly into the past."
+      },
+      {
+        name: "The Illusion of Time and Memory",
+        description: "Gatsby believes that through sheer force of will and material power, one can repeat the past and erase years of separation. His entire identity is an engineered theatrical act designed to recreate the specific moment she loved him.",
+        quote: "'Can't repeat the past?' he cried incredulously. 'Why of course you can!'"
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Revelation of the Green Light's Collapse",
+        act: "Chapter 5",
+        description: "After Gatsby finally reunites with Daisy at Nick's cottage, they walk through Gatsby's monstrous mansion. Nick reflects that the glowing green light at the end of Daisy's dock—which Gatsby worshiped through years of separation—has suddenly lost its colossal significance, consumed by the reality of her physical presence.",
+        impact: "Signals the transition of Gatsby's central romantic myth into real-world compromise, foreshadowing the tragic weight of shattered dreams."
+      },
+      {
+        title: "The Deadly Judgment of the Valley of Ashes",
+        act: "Chapter 7 & 8",
+        description: "On a sweltering New York summer afternoon, Gatsby's yellow car strikes and kills Myrtle Wilson in the Valley of Ashes. The tragic sequence concludes downcast in Gatsby's swimming pool, where George Wilson acts as the fatal executioner of a romantic illusion under the unblinking, fading eyes of Doctor T.J. Eckleburg.",
+        impact: "Exposes the merciless consequences of the reckless rich, who retreat into their money and vast carelessness, leaving others to pay the price."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "Jay Gatsby",
+        role: "The Tragic Visionary",
+        archetype: "The Self-Made Romantic Idealist",
+        analysis: "Formerly James Gatz, he is a self-mythologizing figure of high romance who acts as a vessel for pure, beautiful, and ultimately fatal hope. His material luxury is merely an apparatus to command Daisy's attention."
+      },
+      {
+        name: "Daisy Buchanan",
+        role: "The Ethereal Siren",
+        archetype: "The Careless Aristocrat",
+        analysis: "A woman of privilege whose enchanting, musical voice masks a profound cowardice. She represents the fragile, gilded status quo—alluring from afar but emotionally vacant and cowardly under pressure."
+      }
+    ],
+    quotes: [
+      {
+        text: "They were careless people, Tom and Daisy—they smashed up things and creatures and then retreated back into their money or their vast carelessness...",
+        speaker: "Nick Carraway (The Narrator)",
+        significance: "Delineates the moral core of the old-money elite who destroy life with impunity, insulated by inherited wealth."
+      },
+      {
+        text: "His dream must have seemed so close that he could hardly fail to grasp it. He did not know that it was already behind him...",
+        speaker: "Nick Carraway",
+        significance: "A crushing philosophical post-mortem of Gatsby's romantic pursuits, extending to the grand American experiment."
+      }
+    ]
+  },
+  {
+    id: "war-and-peace",
+    title: "War and Peace",
+    author: "Leo Tolstoy",
+    era: "1869",
+    genre: "Epic Historical Realism & Philosophy of History",
+    oneSentenceSummary: "The fates of five aristocratic families intertwine during Napoleon's invasion of Russia, demonstrating that history is driven not by great leaders, but by the emergent choices of millions of ordinary souls.",
+    introduction: "Tolstoy's monumental masterwork transcends the boundaries of traditional fiction. It is a brilliant, granular exploration of early 19th-century Russian society, a historical chronicle of the Napoleonic wars, and a radical, explicit challenge to Great Man theory.",
+    themes: [
+      {
+        name: "The Emergent Illusions of History",
+        description: "Tolstoy argues that no single individual—neither Napoleon nor Tsar Alexander—controls the direction of history. Historical movements result from the alignment and integration of countless microscopic, chaotic human actions and chance occurrences.",
+        quote: "A king is the slave of history. History, that is, the unconscious, general, hive-life of mankind, uses every moment of the life of kings as a tool for its own purposes."
+      },
+      {
+        name: "The Search for Moral Truth in suffering",
+        description: "Pierre Bezukhov and Andrey Bolkonsky go on dual existential quests. Andrey searches for glory and intellect, finding peace only in the sublime indifference of death. Pierre searches through society and intellect, finding redemption through the absolute simplicity of common soldiers.",
+        quote: "While there is life there is happiness. There is much, much before us."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "Andrey Bolkonsky's epiphany at Austerlitz",
+        act: "Volume I, Part 3",
+        description: "Wounded on the battlefield of Austerlitz, Prince Andrey lies on his back gazing up at the infinite, serene blue sky. In that moment of near-death, his previous obsession with military glory and Napoleon’s false majesty collapses into complete insignificance.",
+        impact: "Exposes the vanity of military conquest, contrasting the petty struggles of kings with the majestic silence of the universe."
+      },
+      {
+        title: "Pierre's Captivity and Russian Redemption",
+        act: "Volume IV, Part 2",
+        description: "Held captive by the retreating French army, Pierre faces execution but is spared. In the marching camps, he meets the peasant soldier Platon Karataev, whose simple, uncalculated kindness and total lack of self-importance teach Pierre the ultimate meaning of life.",
+        impact: "Shifts the narrative's philosophical axis from intellectual theory to the sublime spiritual grace of humble everyday living."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "Pierre Bezukhov",
+        role: "The Existential Seeker",
+        archetype: "The Awkward, Noble Philosopher",
+        analysis: "A wealthy, socially clumsy illegitimate son who struggles with moral direction and high society. He represents Tolstoy's own personal crisis and search for authentic existential meaning."
+      },
+      {
+        name: "Andrey Bolkonsky",
+        role: "The Cynical Idealist",
+        archetype: "The Disillusioned Aristocrat",
+        analysis: "A brilliant, proud, and emotionally guarded officer who rejects the hollow vanity of Petersburg socialites. His journey is a steady shedding of worldly ambitions in pursuit of raw spiritual truth."
+      }
+    ],
+    quotes: [
+      {
+        text: "The two most powerful warriors are patience and time.",
+        speaker: "General Kutuzov",
+        significance: "Kutuzov represents Tolstoy's ideal leader: one who bows to circumstances, avoids micro-management, and lets time solve strategic complexities."
+      },
+      {
+        text: "If we admit that human life can be ruled by reason, then all possibility of life is destroyed.",
+        speaker: "Leo Tolstoy",
+        significance: "A profound rejection of Enlightenment extreme rationalism in favor of organic, irregular, lived human experience."
+      }
+    ]
+  },
+  {
+    id: "1984",
+    title: "Nineteen Eighty-Four",
+    author: "George Orwell",
+    era: "1949",
+    genre: "Dystopian & Political Fiction",
+    oneSentenceSummary: "In a terrifyingly complete totalitarian superstate, a minor clerk attempts an illegal romance and a quiet intellectual rebellion against a regime that controls memory, language, and reality.",
+    introduction: "Orwell's highly prophetic work remains the definitive warning against modern surveillance, psychological manipulation, state-sanctioned historical revisionism, and the total destruction of individual objective truth.",
+    themes: [
+      {
+        name: "The Engineering of Cognitive Mutilation",
+        description: "The Party maintains control by altering the very pathways of human thought. Through 'Doublethink' (holding two contradictory opinions simultaneously) and 'Newspeak' (reducing vocabulary to eliminate rebellious concepts), they seek to render independent resistance physically impossible.",
+        quote: "Orthodoxy means not thinking—not needing to think. Orthodoxy is unconsciousness."
+      },
+      {
+        name: "The War on Objective Historical Truth",
+        description: "By continuously rewriting historical records to match present propaganda, the Party destroys any frame of reference for the past. For Winston, holding onto the physical memory of a different past becomes the ultimate revolutionary act.",
+        quote: "Who controls the past controls the future: who controls the present controls the past."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Golden Land Rebellion and the Glass Paperweight",
+        act: "Part 2",
+        description: "Winston and Julia escape into the pastoral quiet of the countryside, where they engage in forbidden passionate intimacy. Winston purchases an antique glass paperweight with a coral heart, symbolizing his fragile, beautiful attempt to preserve a sliver of un-industrialized, human history.",
+        impact: "Highlights the radiant beauty of basic human affection as a powerful, non-cooperating counterweight to totalitarianism."
+      },
+      {
+        title: "The Annihilation of the Spirit in Room 101",
+        act: "Part 3, Chapter 5",
+        description: "Imprisoned in the Ministry of Love, Winston faces O'Brien and his absolute worst nightmare: starving rats. To save himself, Winston screams 'Do it to Julia!', completing his utter psychological collapse and betraying his sole moral remaining anchor.",
+        impact: "Establishes the ultimate horror of the state: the power to reach inside a citizen's soul and make them love their own executioner."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "Winston Smith",
+        role: "The Last Individual",
+        archetype: "The Fragile, Melancholic Rebel",
+        analysis: "An ordinary citizen who is plagued by physical decay and half-remembered history. His rebellion is not heroic, but deeply human—founded on a basic craving for physical sensation, logic, and memory."
+      },
+      {
+        name: "O'Brien",
+        role: "The Voice of the Party",
+        archetype: "The Intellectual Inquisitor",
+        analysis: "A highly intelligent, deeply cultured, and chillingly sane agent of the Inner Party. He has no illusions about ideology; he understands that power is not a means to an end, but the ultimate end itself."
+      }
+    ],
+    quotes: [
+      {
+        text: "Freedom is the freedom to say that two plus two make four. If that is granted, all else follows.",
+        speaker: "Winston Smith (His Diary)",
+        significance: "Affirms that individual sanity and the objective, empirical reality of the physical world are the essential foundations of freedom."
+      },
+      {
+        text: "If you want a picture of the future, imagine a boot stamping on a human face—forever.",
+        speaker: "O'Brien",
+        significance: "A chilling, unmasked expression of raw, absolute, and permanent power devoid of moralizing justification."
+      }
+    ]
+  },
+  {
+    id: "spqr",
+    title: "SPQR",
+    author: "Mary Beard",
+    era: "2015",
+    genre: "Ancient History & Historiographical Revisionism",
+    tag: "Tony's List",
+    oneSentenceSummary: "A brilliant and witty examination of Ancient Rome’s first millennium, questioning the myths of its foundation, the realities of citizenship, and the complex structures of its imperial power.",
+    introduction: "Mary Beard’s 'SPQR' (Senatus Populusque Romanus) provides a critical, revisionist account of Rome's rise. Spanning from its mythic origin as a muddy village to the dramatic point when Emperor Caracalla granted universal Roman citizenship, Beard strips away centuries of romantic propaganda to investigate the daily lives and political realities of the ancient metropolis.",
+    themes: [
+      {
+        name: "Demystifying Roman Foundations and Imperial Myths",
+        description: "Beard explores how Cicero, Augustus, and early historians engineered a retroactive golden age, demonstrating why the line between legend and history remains perpetually blurred in the historical record.",
+        quote: "The history of Rome is a history of constant change, and the idea of a fixed, unchanging 'classic' Roman character is itself a Roman myth."
+      },
+      {
+        name: "Citizenship, Power, and the Outsider",
+        description: "The book examines the revolutionary Roman concept of incorporating conquered enemies, expanding the definition of citizenship, and the deep tensions between state security and civil liberties.",
+        quote: "We are still, in one way or another, in dialogue with the writers of classical Rome. It is the conversation that has built our world."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Catilinarian Conspiracy and Cicero's Hour of Glory",
+        act: "63 BC",
+        description: "Consul Marcus Tullius Cicero uncovers a revolutionary coup led by the bankrupt aristocrat Catiline, highlighting the eternal political trade-offs between national security, executive authority, and constitutional rights.",
+        impact: "Set the historic legal precedent for declaring states of emergency and civil liberty suspensions in Western democracies."
+      },
+      {
+        title: "Caracalla’s Edict of Universal Citizenship",
+        act: "212 AD",
+        description: "In a single administrative stroke, Emperor Caracalla declares every free citizen of the empire a Roman citizen, permanently changing the Roman identity and ending the republic-derived distinction of the capital.",
+        impact: "Dismantled the traditional hierarchy of conquest, creating a single, vast, standardized administrative population."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "The Roman Citizen",
+        role: "The Legal Anchor",
+        archetype: "The Privileged Subject",
+        analysis: "The legal identity that offered unparalleled rights, protections, and recourse across thousands of miles, evolving from an exclusive municipal privilege into a universal administrative category."
+      },
+      {
+        name: "The Marginalized Outsider",
+        role: "The Enslaved / Disenfranchised",
+        archetype: "The Silent Fuel",
+        analysis: "Those whose labor, disenfranchisement, and gradual integration fueled the empire's growth, but whose authentic historical voices were largely erased or heavily filtered through aristocratic Roman writers."
+      }
+    ],
+    quotes: [
+      {
+        text: "There is no single story of Rome. We have to make our own sense of Rome, and Roman history is a work in progress.",
+        speaker: "Mary Beard",
+        significance: "Emphasizes the fluid, critical, and evolutionary nature of history, warning against accepting nationalistic master-narratives."
+      },
+      {
+        text: "Liberty consists not in having a good master, but in having no master at all.",
+        speaker: "Cicero (quoted in SPQR)",
+        significance: "A central ideal of Republican Rome that influenced Enlightenment philosophy and modern democratic ideals."
+      }
+    ]
+  },
+  {
+    id: "the-republic",
+    title: "The Republic",
+    author: "Plato",
+    era: "~375 BC",
+    genre: "Classical Philosophy & Political Utopianism",
+    oneSentenceSummary: "A towering Socratic dialogue investigating the nature of justice, the ideal state structured by the tripartite soul, and the philosopher-king's duty to see beyond the shadows of sensory illusions.",
+    introduction: "Plato's 'The Republic' is the foundational cornerstone of Western political and philosophical thought. Conceived as a structured conversation led by Socrates, the dialogue seeks to define individual justice by constructing a hypothetical ideal society (Kallipolis), famously introducing the Allegory of the Cave and the concept of the Philosopher-King.",
+    themes: [
+      {
+        name: "Justice as Psychic and Political Harmony",
+        description: "The assertion that justice is not merely power, convention, or utility, but the harmonious alignment of the structural parts of the individual soul (rational, spirited, and appetitive) and the working classes of the state.",
+        quote: "Justice in the life and conduct of the State is possible only as first it resides in the souls of the citizens."
+      },
+      {
+        name: "The Tyranny of the Sensuous and the World of Forms",
+        description: "A deep epistemological distinction between the deceptive shadows of physical, sensory reality and the unchanging, eternal, objective truth of the transcendent Forms, accessible only via reason.",
+        quote: "The object of education is to teach us to love what is beautiful."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Allegory of the Cave",
+        act: "Book VII",
+        description: "Socrates describes prisoners tied inside a dark subterranean cave, mistaking cast shadows on the back wall for true reality, until one is forcibly dragged out into the painful, blinding light of the true sun.",
+        impact: "Acts as the ultimate metaphor for human ignorance, cognitive liberation, and the educational responsibility of philosophers."
+      },
+      {
+        title: "The Dismantling of Kallipolis into Tyranny",
+        act: "Book VIII",
+        description: "A dramatic, systematic account of constitutional decay, showing how the ideal aristocracy progressively dissolves into military timocracy, wealth-loving oligarchy, volatile democracy, and finally, the absolute chaos of tyranny.",
+        impact: "Serves as a historical and psychological warning about how unbridled liberty inevitably births its own absolute opposite."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "The Philosopher-King",
+        role: "The Guardian Ruler",
+        archetype: "The Visionary Steward",
+        analysis: "A rare intellectual guardian whose passion is objective truth rather than personal power, forced to descend back into the cave to govern out of intellectual and moral duty to the state."
+      },
+      {
+        name: "The Socratic Inquirer",
+        role: "The Dialectician (Socrates)",
+        archetype: "The Sacred Gadfly",
+        analysis: "The irony-soaked guide who claims to know nothing, yet systematically unravels the dogmatic definitions of his companions through relentless, cooperative elenctic dialogue."
+      }
+    ],
+    quotes: [
+      {
+        text: "Until philosophers are kings, or the kings and princes of this world have the spirit and power of philosophy, and political greatness and wisdom meet in one... cities will never have rest from their evils.",
+        speaker: "Socrates",
+        significance: "Plato’s classic thesis that effective politics is impossible without absolute, transcendent moral and intellectual grounding."
+      },
+      {
+        text: "The heaviest penalty for deciding not to rule is to be ruled by someone worse than yourself.",
+        speaker: "Socrates",
+        significance: "An appeal to high-minded citizens to take up public service, warning that apathy leads straight to tyrannical decay."
+      }
+    ]
+  },
+  {
+    id: "frankenstein",
+    title: "Frankenstein",
+    author: "Mary Shelley",
+    era: "1818",
+    genre: "Gothic Horror & Early Science Fiction",
+    oneSentenceSummary: "A brilliant and haunting warning on the hubris of scientific creation, where an ambitious young scholar plays God and subsequently abandons his monstrous, emotionally sensitive creation.",
+    introduction: "Mary Shelley's 'Frankenstein; or, The Modern Prometheus' sits at the dawn of science fiction and the height of Romantic gothic literature. Written during a rainy summer in Switzerland when she was only eighteen, the novel explores the dark boundaries of biology, parental neglect, and the tragic consequences of societal alienation.",
+    themes: [
+      {
+        name: "The Promethean Hubris of Creation",
+        description: "The dangerous urge of the scientist to transcend biological and spiritual boundaries without accepting the moral, parental, and spiritual responsibilities of the life they bring forth.",
+        quote: "Frightful must it be; for supremely frightful would be the effect of any human endeavour to mock the stupendous mechanism of the Creator of the world."
+      },
+      {
+        name: "Societal Alienation and the Genesis of Monstrosity",
+        description: "A tragic demonstration that the Creature's violent nature is not inherent, but is systematically beaten and conditioned into him by the immediate revulsion, shallow prejudice, and cruelty of humanity.",
+        quote: "No father had watched my infant days, no mother had blessed me with smiles and caresses."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Sinking of Breath into the Creature",
+        act: "Chapter 5",
+        description: "On a dreary night in November, Victor witnesses the dull yellow eye of his assembled creature open. Instantly seized with breathless horror and raw biological disgust, he flees his laboratory, completely abandoning his newborn.",
+        impact: "Launches the central tragedy of abandonment, initiating the Creature's fall from gentle curiosity to homicidal despair."
+      },
+      {
+        title: "The Sublime Confrontation on the Mer de Glace",
+        act: "Chapter 10",
+        description: "High in the majestic, freezing Alps, Victor is confronted by the Creature, who bounding across the ice sheets delivers an incredibly eloquent, heartbreaking demand: either Victor must fulfill his duties of compassion, or face a bloody war.",
+        impact: "Reverses the moral polarities, revealing the Creature to be highly intelligent, deeply philosophical, and more human than his creator."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "Victor Frankenstein",
+        role: "The Obsessive Creator",
+        archetype: "The Ignoble Intellectual",
+        analysis: "A proud, self-centered Swiss scientist who burns with an ambition to conquer death, but whose absolute moral cowardice and rejection of his creation destroy everyone he loves."
+      },
+      {
+        name: "The Creature",
+        role: "The Abandoned Child",
+        archetype: "The Eloquent Fiend",
+        analysis: "A giant of unparalleled strength and deep emotional sensitivity, who learns language and beautiful literature by observing humans from afar, only to be driven to bloodthirsty revenge by absolute, agonizing loneliness."
+      }
+    ],
+    quotes: [
+      {
+        text: "I ought to be thy Adam; but I am rather the fallen angel, whom thou drivest from joy for no misdeed.",
+        speaker: "The Creature",
+        significance: "A devastating theological indictment of Victor's bad stewardship, comparing Victor to an unmerciful, tyrannical deity."
+      },
+      {
+        text: "Beware; for I am fearless, and therefore powerful.",
+        speaker: "The Creature",
+        significance: "A declaration of absolute freedom born from total social abandonment and the loss of all hopes and human ties."
+      }
+    ]
+  },
+  {
+    id: "meditations",
+    title: "Meditations",
+    author: "Marcus Aurelius",
+    era: "~170-180 AD",
+    genre: "Stoic Philosophy & Private Journals",
+    oneSentenceSummary: "The private, unpretentious spiritual reflections of the world's most powerful emperor, reminding himself of the fleeting nature of fame, the duty to serve others, and the absolute sovereignty of the rational mind.",
+    introduction: "Written while on military campaign on the Roman northern frontier, 'Meditations' is a series of twelve books of private notes never intended for public eyes. It serves as a raw, honest self-examination, where Marcus Aurelius repeatedly urges himself to practice Stoicism, accept the natural order of the universe (Logos), and maintain inner quietude.",
+    themes: [
+      {
+        name: "The Citadel of the Inner Mind",
+        description: "The core Stoic concept that external events have no power to harm our souls; only our own judgments and subjective cognitive reactions can cause us true distress and suffering.",
+        quote: "You have power over your mind - not outside events. Realize this, and you will find strength."
+      },
+      {
+        name: "The Fleeting Illusion of Fame and Mortality",
+        description: "A continuous meditation on the vast sea of time and space, demonstrating that global empire, memories, and glory are fleeting specks of dust destined to dissolve into the Logos.",
+        quote: "Time is a river, a fierce torrent of things that come into being; no sooner is a thing brought to sight than it is swept away."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Dawn Commandment against Anger",
+        act: "Book II, Chapter 1",
+        description: "Awakening in his military war tent, Marcus commands himself to expect ingratitude, arrogance, and dishonesty, reminding himself that those who do wrong are his intellectual kin, and that to be angry at one's kin is to act against Nature.",
+        impact: "Lays down the ultimate daily mental preparation guideline for leadership and emotional resilience."
+      },
+      {
+        title: "The Graceful Departure of the Actor",
+        act: "Book XII, Chapter 36",
+        description: "Marcus concludes his private journal by urging himself to depart with a gracious and gentle heart, comparing human life to a theatrical play from which the master director has now dismissed him.",
+        impact: "Demonstrates a perfect, fearless acceptance of death and impermanence, free of narcissistic terror."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "Marcus Aurelius",
+        role: "The Philosopher Emperor",
+        archetype: "The Reluctant Monarch",
+        analysis: "A man holding absolute power over millions, who consciously struggles to resist the corrupting illusions of the imperial palace, working daily to remain a humble servant of duty and reason."
+      },
+      {
+        name: "The Logos",
+        role: "Universal Nature",
+        archetype: "The Cosmic Order",
+        analysis: "The rational, harmonious cosmic engine of constant change, growth, and decay, to which all physical matter and human experiences must gracefully return and conform."
+      }
+    ],
+    quotes: [
+      {
+        text: "The best revenge is to be unlike him who performed the injury.",
+        speaker: "Marcus Aurelius",
+        significance: "An expression of Stoic nobility that rejects anger and retaliation in favor of maintaining exemplary character."
+      },
+      {
+        text: "The happiness of your life depends upon the quality of your thoughts.",
+        speaker: "Marcus Aurelius",
+        significance: "The central psychological tenet behind cognitive behavioral therapy and modern mindfulness practices."
+      }
+    ]
   }
 ];
