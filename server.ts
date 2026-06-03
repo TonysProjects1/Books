@@ -61,6 +61,7 @@ Provide an academic and engaging analysis, extracting the central themes, most e
               title: { type: Type.STRING, description: "The official, canonical title of the book" },
               author: { type: Type.STRING, description: "The full name of the author" },
               era: { type: Type.STRING, description: "The year of publication or historical era (e.g., 1884, c. 8th Century BCE)" },
+              genre: { type: Type.STRING, description: "The primary classical literary genre (e.g., Epic Poetry, Coming-of-Age Fiction, War Literature, Dystopian Fiction)" },
               oneSentenceSummary: { type: Type.STRING, description: "A highly refined, single-sentence encapsulation of the core narrative tension" },
               introduction: { type: Type.STRING, description: "A sophisticated introduction analyzing the historical and literary significance of the work" },
               themes: {
@@ -122,6 +123,7 @@ Provide an academic and engaging analysis, extracting the central themes, most e
               "title",
               "author",
               "era",
+              "genre",
               "oneSentenceSummary",
               "introduction",
               "themes",

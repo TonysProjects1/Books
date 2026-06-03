@@ -10,12 +10,46 @@ import {
   Feather,
   Info,
   ArrowUp,
-  Calendar
+  Calendar,
+  Sun,
+  Moon
 } from "lucide-react";
 import { BookSummary } from "./types";
 import { preCuratedBooks } from "./preCuratedData";
 
 export default function App() {
+  const curatedIds = [
+    "huckleberry-finn",
+    "the-odyssey",
+    "all-quiet-on-the-western-front",
+    "the-catcher-in-the-rye",
+    "fahrenheit-451",
+    "to-kill-a-mockingbird",
+    "zero-to-one",
+    "thinking-fast-and-slow"
+  ];
+
+  // Dark Mode State
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem("grand-archive-theme") === "dark";
+    } catch {
+      return false;
+    }
+  });
+
+  const toggleDarkMode = () => {
+    setIsDarkMode((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem("grand-archive-theme", next ? "dark" : "light");
+      } catch (e) {
+        console.error("Failed to save theme:", e);
+      }
+      return next;
+    });
+  };
+
   // Read saved books from localStorage if present
   const [books, setBooks] = useState<BookSummary[]>(() => {
     try {
@@ -23,9 +57,7 @@ export default function App() {
       if (saved) {
         const parsed = JSON.parse(saved) as BookSummary[];
         // Filter out any duplicates of pre-curated books to prevent collisions
-        const cleanSaved = parsed.filter(
-          (b) => b.id !== "huckleberry-finn" && b.id !== "the-odyssey"
-        );
+        const cleanSaved = parsed.filter((b) => !curatedIds.includes(b.id));
         return [...preCuratedBooks, ...cleanSaved];
       }
     } catch (e) {
@@ -43,7 +75,7 @@ export default function App() {
   // Local storage preservation
   useEffect(() => {
     try {
-      const aiBooks = books.filter((b) => b.id !== "huckleberry-finn" && b.id !== "the-odyssey");
+      const aiBooks = books.filter((b) => !curatedIds.includes(b.id));
       localStorage.setItem("grand-archive-books", JSON.stringify(aiBooks));
     } catch (e) {
       console.error("Failed to save books:", e);
@@ -135,7 +167,7 @@ export default function App() {
   // Delete searched book
   const deleteBook = (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
-    if (id === "huckleberry-finn" || id === "the-odyssey") return;
+    if (curatedIds.includes(id)) return;
     setBooks((prev) => prev.filter((b) => b.id !== id));
   };
 
@@ -146,22 +178,82 @@ export default function App() {
     }
   };
 
+  // Group books dynamically by genre
+  const groupedByGenre = books.reduce<Record<string, BookSummary[]>>((acc, book) => {
+    const genreName = book.genre || "Classical Narrative / Literary Fiction";
+    if (!acc[genreName]) {
+      acc[genreName] = [];
+    }
+    acc[genreName].push(book);
+    return acc;
+  }, {});
+
+  // Dynamic theme mapping based on isDarkMode state
+  const theme = {
+    bg: isDarkMode
+      ? "bg-[#14110E] text-[#D4CBBF] selection:bg-[#4E2B2E] selection:text-[#FFFDFB]"
+      : "bg-[#FAF6F0] text-[#2C241E] selection:bg-[#EAE1D4] selection:text-[#5C1D24]",
+    accentBg: isDarkMode ? "bg-[#C43D4F]" : "bg-[#8E2835]",
+    textAccent: isDarkMode ? "text-[#E05C6E]" : "text-[#8E2835]",
+    textAccentHover: isDarkMode ? "hover:text-[#F77C8D]" : "hover:text-[#5C1D24]",
+    textAccentClassic: isDarkMode ? "text-[#E05C6E] md:text-base font-serif font-medium italic" : "text-sm md:text-base font-serif text-[#8E2835] font-medium italic",
+    cardBg: isDarkMode
+      ? "bg-[#1E1915] border-[#2C251F] shadow-md shadow-[#0F0A07]/50"
+      : "bg-[#FFFDFB] border-[#ECE1D4] shadow-sm",
+    articleBg: isDarkMode 
+      ? "bg-[#1D1814] border-[#2C251F] shadow-md shadow-[#0F0A07]/50" 
+      : "bg-white border-[#ECE1D4] shadow-sm",
+    inputBg: isDarkMode
+      ? "bg-[#14110E] border-[#2C251F] text-[#FAF6F0] focus:ring-[#E05C6E]"
+      : "bg-[#FAF6F0] border-[#ECE1D4] text-[#2C241E] focus:ring-[#8E2835]",
+    headingColor: isDarkMode ? "text-[#FAF5EE]" : "text-[#1A130E]",
+    textColorPrimary: isDarkMode ? "text-[#FAF5EE]" : "text-[#2C241E]",
+    textColorSecondary: isDarkMode ? "text-[#C2B7A8]" : "text-neutral-800",
+    textSub: isDarkMode ? "text-[#B0A493]" : "text-neutral-600",
+    textMuted: isDarkMode ? "text-neutral-400" : "text-neutral-500",
+    blockquoteBg: isDarkMode ? "bg-[#251F1A] text-[#D9CFC1]" : "bg-[#FAF6F0] text-neutral-700",
+    climaxCardBg: isDarkMode
+      ? "bg-[#241F1A] border-[#2E2721]"
+      : "bg-[#FAF6F0]/60 border-[#ECE1D4]/40",
+    charCardBorder: isDarkMode ? "border-[#2A231D]" : "border-[#FAF6F0]",
+    borderDotted: isDarkMode ? "border-[#2C251F]" : "border-[#E5DAC9]",
+    badgeGenreBg: isDarkMode
+      ? "bg-[#291A1C] text-[#E05C6E] border border-[#4D2428]"
+      : "bg-[#FAF6F0] text-[#8E2835] border border-[#ECDCCB]",
+    borderLight: isDarkMode ? "border-[#251F1A]" : "border-[#FAF6F0]",
+    borderMedium: isDarkMode ? "border-[#2C251F]" : "border-[#ECE1D4]",
+    returnBtn: isDarkMode
+      ? "bg-[#C43D4F] text-white hover:bg-[#D64F62]"
+      : "bg-[#8E2835] text-white hover:bg-[#72202A]"
+  };
+
   return (
-    <div className="min-h-screen bg-[#FAF6F0] text-[#2C241E] font-sans selection:bg-[#EAE1D4] selection:text-[#5C1D24] transition-colors duration-300">
+    <div className={`min-h-screen ${theme.bg} font-sans transition-colors duration-300`}>
       
       {/* Editorial Top Border Accent */}
-      <div className="h-1.5 w-full bg-[#8E2835]" />
+      <div className={`h-1.5 w-full ${theme.accentBg}`} />
 
       <div className="max-w-4xl mx-auto px-6 py-12 md:py-16">
         
         {/* Minimal Editorial Header */}
-        <header className="text-center pb-8 border-b border-[#ECE1D4] mb-12">
+        <header className={`text-center pb-8 border-b ${theme.borderMedium} mb-12`}>
           <div className="flex justify-between items-center text-xs font-mono tracking-widest opacity-60 uppercase mb-4">
             <span>THE BOOKSHELF</span>
-            <span>EDITION I · JUN 2026</span>
+            <div className="flex items-center gap-4">
+              <span>EDITION I · JUN 2026</span>
+              <button
+                onClick={toggleDarkMode}
+                className={`p-1.5 rounded-full transition-colors flex items-center justify-center cursor-pointer ${
+                  isDarkMode ? "hover:bg-[#251F1A] text-[#E05C6E]" : "hover:bg-neutral-200/50 text-[#8E2835]"
+                }`}
+                title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+              >
+                {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              </button>
+            </div>
           </div>
 
-          <h1 className="font-serif italic font-bold text-4xl md:text-5xl tracking-wide text-[#1A130E] uppercase mb-1">
+          <h1 className={`font-serif italic font-bold text-4xl md:text-5xl tracking-wide ${theme.headingColor} uppercase mb-1`}>
             The Grand Archive
           </h1>
           <p className="font-serif text-sm italic opacity-75 max-w-xl mx-auto leading-relaxed">
@@ -169,77 +261,94 @@ export default function App() {
           </p>
         </header>
 
-        {/* LIST OF BOOKS DIRECTORY (INDEX NAVIGATION) */}
-        <nav className="bg-[#FFFDFB] border border-[#ECE1D4] rounded p-6 md:p-8 mb-12 space-y-4 shadow-sm">
-          <h2 className="font-serif italic font-semibold text-lg text-[#1A130E] border-b border-[#FAF6F0] pb-2 mb-3">
-            Table of Canonical Monographs
-          </h2>
+        {/* LIST OF BOOKS DIRECTORY (INDEX NAVIGATION GROUPED BY GENRE) */}
+        <nav className={`${theme.cardBg} rounded p-6 md:p-8 mb-12 space-y-6`}>
+          <div className={`border-b ${theme.borderLight} pb-2 mb-2`}>
+            <h2 className={`font-serif italic font-semibold text-lg ${theme.headingColor}`}>
+              Table of Canonical Monographs
+            </h2>
+            <p className={`text-[10px] font-mono tracking-widest ${theme.textAccent} uppercase`}>
+              Classified Hierarchically by Literary Genre
+            </p>
+          </div>
           
-          <ul className="space-y-2 text-sm leading-relaxed">
-            {books.map((book, index) => (
-              <li key={book.id} className="flex justify-between items-baseline group">
-                <button
-                  onClick={() => scrollToSection(book.id)}
-                  className="text-left font-serif text-base text-[#8E2835] hover:underline hover:text-[#5C1D24] font-medium flex items-center gap-1.5 cursor-pointer"
-                >
-                  <span className="font-mono text-xs opacity-50">0{index + 1}.</span>
-                  <span>{book.title}</span>
-                  <span className="text-xs font-sans text-neutral-500 font-normal">by {book.author}</span>
-                </button>
-                <div className="flex-grow border-b border-dotted border-[#E5DAC9] mx-3" />
+          <div className="space-y-6">
+            {(Object.entries(groupedByGenre) as Array<[string, BookSummary[]]>).map(([genre, genreBooks]) => (
+              <div key={genre} className="space-y-3">
                 <div className="flex items-center gap-2">
-                  <span className="font-mono text-xs opacity-60 bg-[#FAF6F0] px-2 py-0.5 rounded">
-                    {book.era}
-                  </span>
-                  {book.id !== "huckleberry-finn" && book.id !== "the-odyssey" && (
-                    <button
-                      onClick={(e) => deleteBook(book.id, e)}
-                      className="text-xs text-red-700 hover:text-red-900 font-mono opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-0.5 hover:underline"
-                      title="Delete summary"
-                    >
-                      <Trash2 className="w-3 h-3" />
-                    </button>
-                  )}
+                  <div className={`h-1.5 w-1.5 rounded-full ${theme.accentBg}`} />
+                  <h3 className={`text-[11px] font-mono font-bold tracking-widest uppercase rounded px-2 py-0.5 ${theme.badgeGenreBg}`}>
+                    {genre}
+                  </h3>
                 </div>
-              </li>
+                
+                <ul className="space-y-2 text-sm leading-relaxed pl-1">
+                  {genreBooks.map((book) => (
+                    <li key={book.id} className="flex justify-between items-baseline group">
+                      <button
+                        onClick={() => scrollToSection(book.id)}
+                        className={`text-left font-serif text-base font-medium flex items-center gap-2 cursor-pointer ${theme.textColorPrimary} ${theme.textAccentHover} transition-colors`}
+                      >
+                        <BookOpen className="w-3.5 h-3.5 opacity-60" />
+                        <span>{book.title}</span>
+                        <span className={`text-xs font-sans font-normal ${theme.textMuted}`}>by {book.author}</span>
+                      </button>
+                      <div className={`flex-grow border-b border-dotted ${theme.borderDotted} mx-3`} />
+                      <div className="flex items-center gap-2">
+                        <span className={`font-mono text-xs opacity-60 px-2 py-0.5 rounded ${theme.blockquoteBg}`}>
+                          {book.era}
+                        </span>
+                        {!curatedIds.includes(book.id) && (
+                          <button
+                            onClick={(e) => deleteBook(book.id, e)}
+                            className="text-xs text-red-700 hover:text-red-900 font-mono opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-0.5 hover:underline"
+                            title="Delete summary"
+                          >
+                            <Trash2 className="w-3 h-3" />
+                          </button>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
         </nav>
-
-        {/* MINIMAL SEARCH COMPILER */}
-        <section className="bg-[#FFFDFB] border border-[#ECE1D4] rounded p-6 md:p-8 mb-16 space-y-4 shadow-sm">
+         {/* MINIMAL SEARCH COMPILER */}
+        <section className={`${theme.cardBg} rounded p-6 md:p-8 mb-16 space-y-4`}>
           <div className="flex items-center gap-2">
-            <Sparkles className="w-4.5 h-4.5 text-[#8E2835]" />
-            <h3 className="font-serif italic font-semibold text-lg text-[#1A130E]">
+            <Sparkles className={`w-4.5 h-4.5 ${theme.textAccent}`} />
+            <h3 className={`font-serif italic font-semibold text-lg ${theme.headingColor}`}>
               Analyze Another Masterpiece
             </h3>
           </div>
           
-          <p className="text-xs leading-relaxed text-neutral-600">
+          <p className={`text-xs leading-relaxed ${theme.textSub}`}>
             Submit any canonical book or classical epic. Our artificial scholar will immediately analyze, summarize, and append the critical record to this page.
           </p>
 
           <form onSubmit={handleInquiry} className="flex flex-col sm:flex-row gap-3 pt-1">
             <div className="relative flex-grow">
-              <Search className="absolute left-3 top-3 w-4 h-4 opacity-40 text-[#2C241E]" />
+              <Search className={`absolute left-3 top-3 w-4 h-4 opacity-40 ${theme.textColorPrimary}`} />
               <input
                 type="text"
                 value={searchQuery}
                 disabled={isLoading}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="e.g., Moby Dick, Hamlet, Pride and Prejudice..."
-                className="w-full text-sm pl-9 pr-4 py-2.5 rounded border border-[#ECE1D4] focus:outline-none focus:ring-1 focus:ring-[#8E2835] bg-[#FAF6F0] font-serif placeholder:font-sans text-[#2C241E]"
+                className={`w-full text-sm pl-9 pr-4 py-2.5 rounded border focus:outline-none focus:ring-1 font-serif placeholder:font-sans focus:ring-opacity-50 transition-colors ${theme.inputBg}`}
               />
             </div>
             
             <button
-              type="submit"
-              disabled={isLoading || !searchQuery.trim()}
-              className={`px-5 py-2.5 rounded text-sm font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
-                isLoading || !searchQuery.trim()
-                  ? "bg-neutral-200 text-neutral-500 cursor-not-allowed"
-                  : "bg-[#8E2835] text-white hover:bg-[#72202A]"
-              }`}
+               type="submit"
+               disabled={isLoading || !searchQuery.trim()}
+               className={`px-5 py-2.5 rounded text-sm font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
+                 isLoading || !searchQuery.trim()
+                   ? (isDarkMode ? "bg-neutral-800 text-neutral-500 cursor-not-allowed" : "bg-neutral-200 text-neutral-500 cursor-not-allowed")
+                   : (isDarkMode ? "bg-[#C43D4F] text-white hover:bg-[#D64F62]" : "bg-[#8E2835] text-white hover:bg-[#72202A]")
+               }`}
             >
               {isLoading ? (
                 <>
@@ -257,8 +366,8 @@ export default function App() {
 
           {/* Loading States */}
           {isLoading && (
-            <div className="p-3 bg-[#FAF6F0] rounded text-center border border-[#ECE1D4] animate-pulse">
-              <p className="text-xs font-mono font-semibold text-[#8E2835]">
+            <div className={`p-3 rounded text-center border animate-pulse ${theme.blockquoteBg} ${theme.borderMedium}`}>
+              <p className={`text-xs font-mono font-semibold ${theme.textAccent}`}>
                 {loadingStep}
               </p>
               <p className="text-[10px] opacity-60 mt-0.5">Sifting standard academic consensus through the digital ether</p>
@@ -286,13 +395,13 @@ export default function App() {
             <article
               key={book.id}
               id={book.id}
-              className="scroll-mt-12 bg-white border border-[#ECE1D4] rounded p-8 md:p-12 space-y-8 shadow-sm relative group"
+              className={`scroll-mt-12 ${theme.articleBg} rounded p-8 md:p-12 space-y-8 relative group transition-colors duration-300`}
             >
               {/* Back to Top contextual links & anchor tracker */}
               <div className="absolute top-6 right-6 flex items-center gap-2 text-xs font-mono opacity-50 group-hover:opacity-100 transition-opacity">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                  className="flex items-center gap-0.5 hover:text-[#8E2835] hover:underline cursor-pointer"
+                  className={`flex items-center gap-0.5 ${theme.textAccentHover} hover:underline cursor-pointer transition-colors`}
                 >
                   <ArrowUp className="w-3.5 h-3.5" />
                   <span>Index</span>
@@ -300,64 +409,64 @@ export default function App() {
               </div>
 
               {/* Book Header */}
-              <header className="space-y-3 pb-6 border-b border-[#FAF6F0]">
-                <div className="flex items-center gap-1 border-b border-[#FAF6F0] pb-2">
+              <header className={`space-y-3 pb-6 border-b ${theme.borderLight}`}>
+                <div className={`flex items-center gap-1 border-b ${theme.borderLight} pb-2`}>
                   <span className="font-mono text-xs opacity-60 uppercase">Monograph Vol. 0{index + 1}</span>
-                  <span className="text-[#ECE1D4]">|</span>
+                  <span className={`${theme.textMuted}`}>|</span>
                   <span className="font-mono text-xs opacity-60 uppercase">{book.era} Classic</span>
                 </div>
                 
-                <h3 className="font-serif italic font-bold text-3xl md:text-4xl text-[#1A130E] tracking-tight">
+                <h3 className={`font-serif italic font-bold text-3xl md:text-4xl ${theme.headingColor} tracking-tight`}>
                   {book.title}
                 </h3>
                 
-                <p className="text-sm md:text-base font-serif text-[#8E2835] font-medium italic">
+                <p className={`text-sm md:text-base font-serif ${theme.textAccent} font-medium italic`}>
                   by {book.author}
                 </p>
               </header>
 
               {/* SECTION I: SUMMARY OF THE ENTIRE BOOK */}
               <section className="space-y-4">
-                <h4 className="font-serif font-bold text-lg text-[#1A130E] tracking-tight border-l-3 border-[#8E2835] pl-3">
+                <h4 className={`font-serif font-bold text-lg ${theme.headingColor} tracking-tight border-l-3 ${theme.accentBg} pl-3`}>
                   Summary of the Entire Book
                 </h4>
                 
-                <blockquote className="bg-[#FAF6F0] p-4 rounded text-sm font-serif italic text-neutral-700 leading-relaxed relative">
+                <blockquote className={`${theme.blockquoteBg} p-4 rounded text-sm font-serif italic leading-relaxed relative`}>
                   &ldquo;{book.oneSentenceSummary}&rdquo;
                 </blockquote>
 
-                <p className="text-sm md:text-base leading-relaxed text-neutral-800 font-serif">
+                <p className={`text-sm md:text-base leading-relaxed ${theme.textColorSecondary} font-serif`}>
                   {book.introduction}
                 </p>
               </section>
 
               {/* SECTION II: THE AI REVIEW / ACADEMIC CRITIQUE */}
-              <section className="space-y-6 pt-4 border-t border-[#FAF6F0]">
-                <div className="flex items-center gap-2 text-[#8E2835] border-b border-[#FAF6F0] pb-2">
-                  <Sparkles className="w-4 h-4 shrink-0 text-[#8E2835]" />
-                  <h4 className="font-serif italic font-bold text-lg text-[#1A130E] tracking-tight">
+              <section className={`space-y-6 pt-4 border-t ${theme.borderLight}`}>
+                <div className={`flex items-center gap-2 ${theme.textAccent} border-b ${theme.borderLight} pb-2`}>
+                  <Sparkles className="w-4 h-4 shrink-0" />
+                  <h4 className={`font-serif italic font-bold text-lg ${theme.headingColor} tracking-tight`}>
                     AI Review & Academic Critique
                   </h4>
                 </div>
 
                 {/* 1. Core Philosophical Themes */}
                 <div className="space-y-4">
-                  <h5 className="font-mono text-xs uppercase tracking-wider text-neutral-500 font-semibold">
+                  <h5 className={`font-mono text-xs uppercase tracking-wider ${theme.textMuted} font-semibold`}>
                     1. Philosophical Core & Themes
                   </h5>
                   
-                  <div className="space-y-4 divide-y divide-[#FAF6F0]">
-                    {book.themes?.map((theme) => (
-                      <div key={theme.name} className="pt-3 first:pt-0 space-y-1.5">
-                        <h6 className="font-serif text-[#8E2835] font-bold text-sm">
-                          {theme.name}
+                  <div className={`space-y-4 divide-y ${theme.borderLight}`}>
+                    {book.themes?.map((themeItem) => (
+                      <div key={themeItem.name} className="pt-3 first:pt-0 space-y-1.5">
+                        <h6 className={`font-serif ${theme.textAccent} font-bold text-sm`}>
+                          {themeItem.name}
                         </h6>
-                        <p className="text-xs md:text-sm text-neutral-700 leading-relaxed">
-                          {theme.description}
+                        <p className={`text-xs md:text-sm ${theme.textSub} leading-relaxed`}>
+                          {themeItem.description}
                         </p>
-                        {theme.quote && (
-                          <p className="text-[11px] font-serif italic text-neutral-500 pl-3 border-l border-neutral-300">
-                            &ldquo;{theme.quote}&rdquo;
+                        {themeItem.quote && (
+                          <p className={`text-[11px] font-serif italic ${theme.textMuted} pl-3 border-l ${theme.borderMedium}`}>
+                            &ldquo;{themeItem.quote}&rdquo;
                           </p>
                         )}
                       </div>
@@ -366,25 +475,25 @@ export default function App() {
                 </div>
 
                 {/* 2. Most Epic Climax Moments */}
-                <div className="space-y-4 pt-4 border-t border-[#FAF6F0]">
-                  <h5 className="font-mono text-xs uppercase tracking-wider text-neutral-500 font-semibold">
+                <div className={`space-y-4 pt-4 border-t ${theme.borderLight}`}>
+                  <h5 className={`font-mono text-xs uppercase tracking-wider ${theme.textMuted} font-semibold`}>
                     2. Monumental Climax Climbs
                   </h5>
 
                   <div className="space-y-4">
                     {book.epicMoments?.map((moment, ind) => (
-                      <div key={moment.title} className="bg-[#FAF6F0]/60 p-4 border border-[#ECE1D4]/40 rounded space-y-1.5">
-                        <div className="flex items-center justify-between text-xs font-mono text-[#8E2835]">
+                      <div key={moment.title} className={`${theme.climaxCardBg} border p-4 rounded space-y-1.5 transition-colors`}>
+                        <div className={`flex items-center justify-between text-xs font-mono ${theme.textAccent}`}>
                           <span className="font-bold">MOMENT 0{ind + 1}</span>
                           <span>{moment.act}</span>
                         </div>
-                        <h6 className="font-serif text-sm font-bold text-[#1A130E]">
+                        <h6 className={`font-serif text-sm font-bold ${theme.headingColor}`}>
                           {moment.title}
                         </h6>
-                        <p className="text-xs md:text-sm text-neutral-700 leading-relaxed">
+                        <p className={`text-xs md:text-sm ${theme.textSub} leading-relaxed`}>
                           {moment.description}
                         </p>
-                        <p className="text-xs text-neutral-500 italic pt-1 border-t border-[#ECE1D4]/30">
+                        <p className={`text-xs ${theme.textMuted} italic pt-1 border-t ${theme.borderLight}`}>
                           <strong>Thematic Impact:</strong> {moment.impact}
                         </p>
                       </div>
@@ -394,19 +503,19 @@ export default function App() {
 
                 {/* 3. Key Archetypal Characters */}
                 {book.characterProfiles && book.characterProfiles.length > 0 && (
-                  <div className="space-y-4 pt-4 border-t border-[#FAF6F0]">
-                    <h5 className="font-mono text-xs uppercase tracking-wider text-neutral-500 font-semibold">
+                  <div className={`space-y-4 pt-4 border-t ${theme.borderLight}`}>
+                    <h5 className={`font-mono text-xs uppercase tracking-wider ${theme.textMuted} font-semibold`}>
                       3. Key Character Archetypes
                     </h5>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       {book.characterProfiles.map((char) => (
-                        <div key={char.name} className="p-4 border border-[#FAF6F0] rounded space-y-1">
-                          <h6 className="font-serif font-bold text-sm text-[#1A130E]">{char.name}</h6>
-                          <div className="text-[10px] font-mono text-[#8E2835] uppercase tracking-wider">
+                        <div key={char.name} className={`p-4 border ${theme.charCardBorder} rounded space-y-1 transition-colors bg-opacity-20`}>
+                          <h6 className={`font-serif font-bold text-sm ${theme.headingColor}`}>{char.name}</h6>
+                          <div className={`text-[10px] font-mono ${theme.textAccent} uppercase tracking-wider`}>
                             {char.role} · {char.archetype}
                           </div>
-                          <p className="text-[11px] leading-relaxed text-neutral-600 pt-1">
+                          <p className={`text-[11px] leading-relaxed ${theme.textSub} pt-1`}>
                             {char.analysis}
                           </p>
                         </div>
@@ -417,21 +526,21 @@ export default function App() {
 
                 {/* 4. Verifiable Textual Citations */}
                 {book.quotes && book.quotes.length > 0 && (
-                  <div className="space-y-4 pt-4 border-t border-[#FAF6F0]">
-                    <h5 className="font-mono text-xs uppercase tracking-wider text-neutral-500 font-semibold">
+                  <div className={`space-y-4 pt-4 border-t ${theme.borderLight}`}>
+                    <h5 className={`font-mono text-xs uppercase tracking-wider ${theme.textMuted} font-semibold`}>
                       4. Vital Textual Proving Ground
                     </h5>
 
                     <div className="space-y-3">
                       {book.quotes.map((quote) => (
-                        <div key={quote.text} className="border-l-2 border-[#8E2835] pl-4 space-y-1">
-                          <p className="font-serif text-xs md:text-sm italic text-neutral-800 leading-relaxed">
+                        <div key={quote.text} className={`border-l-2 ${theme.accentBg} pl-4 space-y-1`}>
+                          <p className={`font-serif text-xs md:text-sm italic ${theme.textColorSecondary} leading-relaxed`}>
                             &ldquo;{quote.text}&rdquo;
                           </p>
-                          <cite className="block text-[10px] font-mono text-neutral-500 not-italic">
+                          <cite className={`block text-[10px] font-mono ${theme.textMuted} not-italic`}>
                             &mdash; {quote.speaker}
                           </cite>
-                          <p className="text-[10px] text-neutral-600 leading-relaxed">
+                          <p className={`text-[10px] ${theme.textSub} leading-relaxed`}>
                             <strong>Note:</strong> {quote.significance}
                           </p>
                         </div>
@@ -447,8 +556,8 @@ export default function App() {
         </main>
 
         {/* Footer */}
-        <footer className="mt-20 pt-8 border-t border-[#ECE1D4] text-center space-y-2">
-          <p className="font-serif italic text-sm text-neutral-500">
+        <footer className={`mt-20 pt-8 border-t ${theme.borderMedium} text-center space-y-2`}>
+          <p className={`font-serif italic text-sm ${theme.textMuted}`}>
             &ldquo;There is no friend as loyal as a book.&rdquo; &mdash; Ernest Hemingway
           </p>
           <p className="font-mono text-[10px] opacity-50 uppercase tracking-widest">
@@ -462,7 +571,7 @@ export default function App() {
       {showScrollTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-6 right-6 p-2.5 rounded-full bg-[#8E2835] text-white hover:bg-[#72202A] transition-all shadow-md z-50 cursor-pointer flex items-center justify-center border border-[#FAF6F0]/20"
+          className={`fixed bottom-6 right-6 p-2.5 rounded-full ${theme.returnBtn} transition-all shadow-md z-50 cursor-pointer flex items-center justify-center border border-white/10`}
           title="Return to Directory"
         >
           <ArrowUp className="w-4 h-4" />

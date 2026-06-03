@@ -29,13 +29,14 @@ export interface BookSummary {
   title: string;
   author: string;
   era: string;
+  genre: string; // The literary genre (e.g., Epic Poetry, Coming-of-Age, Dystopian Fiction)
   oneSentenceSummary: string;
   introduction: string;
   themes: Theme[];
   epicMoments: EpicMoment[];
   characterProfiles: CharacterProfile[];
   quotes: IconicQuote[];
-  isPreCurated?: boolean; // True for Huckleberry Finn and The Odyssey
+  isPreCurated?: boolean; // True for pre-curated books
   imageUrl?: string; // Cover art identifier or asset
 }
 
