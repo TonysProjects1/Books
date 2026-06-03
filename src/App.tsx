@@ -39,7 +39,10 @@ export default function App() {
     "art-of-war",
     "human-action",
     "next-100-years",
-    "1776"
+    "1776",
+    "bad-blood",
+    "red-notice",
+    "atomic-habits"
   ];
 
   // Dark Mode State
@@ -191,15 +194,89 @@ export default function App() {
     }
   };
 
+  // Order of standardized genres
+  const genrePriority = [
+    "Classic Literature & Fiction",
+    "Philosophy, Politics & Ethics",
+    "Economics, Business & Strategy",
+    "History, Memoirs & Geopolitics"
+  ];
+
+  // Helper to check if book is on Tony's List
+  const isTonyBook = (book: BookSummary) => book.tag === "Tony's List";
+
   // Group books dynamically by genre
   const groupedByGenre = books.reduce<Record<string, BookSummary[]>>((acc, book) => {
-    const genreName = book.genre || "Classical Narrative / Literary Fiction";
+    const genreName = book.genre || "Classic Literature & Fiction";
     if (!acc[genreName]) {
       acc[genreName] = [];
     }
     acc[genreName].push(book);
     return acc;
   }, {});
+
+  // Sorted list of genres and books for Table of Contents
+  const sortedGenreEntries = (Object.entries(groupedByGenre) as Array<[string, BookSummary[]]>).sort(
+    (a, b) => {
+      const genreA = a[0];
+      const genreB = b[0];
+      let idxA = genrePriority.indexOf(genreA);
+      let idxB = genrePriority.indexOf(genreB);
+      if (idxA === -1) idxA = 999;
+      if (idxB === -1) idxB = 999;
+      return idxA - idxB;
+    }
+  ).map((entry) => {
+    const genre = entry[0];
+    const genreBooks = entry[1];
+    const sortedBooks = [...genreBooks].sort((a, b) => {
+      const aIsTony = isTonyBook(a);
+      const bIsTony = isTonyBook(b);
+      if (!aIsTony && bIsTony) return -1;
+      if (aIsTony && !bIsTony) return 1;
+      
+      let indexA = curatedIds.indexOf(a.id);
+      let indexB = curatedIds.indexOf(b.id);
+      if (indexA === -1) indexA = 999;
+      if (indexB === -1) indexB = 999;
+      if (indexA !== indexB) return indexA - indexB;
+      
+      return a.title.localeCompare(b.title);
+    });
+    return [genre, sortedBooks] as [string, BookSummary[]];
+  });
+
+  // Master sorted list of books for chronological rendering of monograph summaries
+  const orderedBooks = [...books].sort((a, b) => {
+    const aIsTony = isTonyBook(a);
+    const bIsTony = isTonyBook(b);
+    
+    // Non-Tony's List first, Tony's List at the bottom
+    if (!aIsTony && bIsTony) return -1;
+    if (aIsTony && !bIsTony) return 1;
+    
+    // Sort by genre order next if tags match
+    let genreIdxA = genrePriority.indexOf(a.genre);
+    let genreIdxB = genrePriority.indexOf(b.genre);
+    if (genreIdxA === -1) genreIdxA = 999;
+    if (genreIdxB === -1) genreIdxB = 999;
+    
+    if (genreIdxA !== genreIdxB) {
+      return genreIdxA - genreIdxB;
+    }
+    
+    // Secondary: sort by ID index in curated list or title
+    let indexA = curatedIds.indexOf(a.id);
+    let indexB = curatedIds.indexOf(b.id);
+    if (indexA === -1) indexA = 999;
+    if (indexB === -1) indexB = 999;
+    
+    if (indexA !== indexB) {
+      return indexA - indexB;
+    }
+    
+    return a.title.localeCompare(b.title);
+  });
 
   // Dynamic theme mapping based on isDarkMode state
   const theme = {
@@ -287,7 +364,7 @@ export default function App() {
           </div>
           
           <div className="space-y-6">
-            {(Object.entries(groupedByGenre) as Array<[string, BookSummary[]]>).map(([genre, genreBooks]) => (
+            {sortedGenreEntries.map(([genre, genreBooks]) => (
               <div key={genre} className="space-y-3">
                 <div className="flex items-center gap-2">
                   <div className={`h-1.5 w-1.5 rounded-full ${theme.accentBg}`} />
@@ -410,7 +487,7 @@ export default function App() {
 
         {/* THE SINGLE PAGE BLOG - SERIALIZED BOOK RECORDS */}
         <main className="space-y-20">
-          {books.map((book, index) => (
+          {orderedBooks.map((book, index) => (
             <article
               key={book.id}
               id={book.id}

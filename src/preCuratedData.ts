@@ -6,7 +6,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "Adventures of Huckleberry Finn",
     author: "Mark Twain",
     era: "1884",
-    genre: "Historical & Satirical Fiction",
+    genre: "Classic Literature & Fiction",
     oneSentenceSummary: "An orphaned boy and a runaway slave forge an forbidden alliance of humanity and survival while rafting down the mighty Mississippi River.",
     introduction: "Mark Twain’s masterpiece is not merely a panoramic portrait of pre-Civil War America, but a shattering indictment of the social structures that sustained the Institution of Slavery. Set against the moving canvas of the Mississippi River, the novel acts as a profound meditation on the conflict between natural human empathy and a diseased, codified 'civilized' conscience.",
     themes: [
@@ -89,7 +89,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "The Odyssey",
     author: "Homer",
     era: "c. 8th Century BCE",
-    genre: "Epic Poetry & Mythology",
+    genre: "Classic Literature & Fiction",
     oneSentenceSummary: "The legendary warrior Odysseus battles fearsome monsters, wrathful gods, and treacherous temptations to return home and reclaim his kingdom after the Trojan War.",
     introduction: "Homer’s epic poem is the monumental foundation stone of Western narrative literature. Tracking the ten-year voyage of a soldier returning from the ashes of Troy, the text is an immortal investigation of identity, family, justice, and the transformative power of intelligence ('metis') over brute cosmic forces.",
     themes: [
@@ -172,7 +172,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "All Quiet on the Western Front",
     author: "Erich Maria Remarque",
     era: "1929",
-    genre: "War & Historical Fiction",
+    genre: "Classic Literature & Fiction",
     oneSentenceSummary: "A young German soldier experiences horrific physical and psychological trauma in the trenches of World War I, stripping away all illusions of patriotic glory.",
     introduction: "Erich Maria Remarque's masterpiece is famously the most powerful and authentic anti-war novel of the twentieth century. Written from the perspective of an ordinary German infantryman, the work documents how industrialized mass-inflicted carnage completely dismantled a generation's spiritual anchors, domestic possibilities, and mental survival.",
     themes: [
@@ -255,7 +255,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "The Catcher in the Rye",
     author: "J.D. Salinger",
     era: "1951",
-    genre: "Coming-of-Age Fiction",
+    genre: "Classic Literature & Fiction",
     oneSentenceSummary: "A disillusioned teenager wanders a cold and hypocritical New York City over a weekend, desperately seeking authentic human connection while resisting the inevitability of growing up.",
     introduction: "J.D. Salinger's classic remains the ultimate manifesto of adolescent alienation, grief, and psychological vulnerability. Written in the highly distinctive vernacular of Holden Caulfield, the story acts as a sharp critique of the post-war American social landscape while mourning the tragic loss of childhood innocence.",
     themes: [
@@ -338,7 +338,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "Fahrenheit 451",
     author: "Ray Bradbury",
     era: "1953",
-    genre: "Dystopian & Sci-Fi Fiction",
+    genre: "Classic Literature & Fiction",
     oneSentenceSummary: "In a sterile, high-tech future where literature is outlawed and 'firemen' burn all books, one fireman rebels after discovering the transformative power of the written word.",
     introduction: "Ray Bradbury’s lyrical dystopia is a terrifyingly prophetic warnings against the voluntary surrender of human intellect to passive, screen-based sensory overload. It champions the painful, messy beauty of deep contemplation and critical dissent over the comfortable, anesthetized happiness mandated by a totalitarian state.",
     themes: [
@@ -421,7 +421,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "To Kill a Mockingbird",
     author: "Harper Lee",
     era: "1960",
-    genre: "Southern Gothic & Social Fiction",
+    genre: "Classic Literature & Fiction",
     oneSentenceSummary: "A young girl in the Jim-Crow South learns profound lessons in empathy, systemic racism, and human integrity as her father defends a wrongly accused black man in a tragic trial.",
     introduction: "Harper Lee's Pulitzer Prize-winning Southern Gothic masterpiece is a cornerstone of American moral training. Blending a child's raw, curious growth with the toxic realities of racial prejudice, the novel serves as an eternal handbook on the courage required to stand for systemic justice.",
     themes: [
@@ -504,7 +504,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "Zero to One",
     author: "Peter Thiel with Blake Masters",
     era: "2014",
-    genre: "Strategic Non-Fiction & Business Philosophy",
+    genre: "Economics, Business & Strategy",
     oneSentenceSummary: "True progress comes not from replicating existing models (going from 1 to n), but from creating entirely new, monopolistic innovations that move the world from zero to one.",
     introduction: "Peter Thiel’s provocative guide to startup strategy is a philosophical treatise on building the future. It challenges standard economic dogma by advocating for creative monopolies, rigorous vertical integration, and deep secrets over incremental improvement.",
     themes: [
@@ -565,7 +565,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "Thinking, Fast and Slow",
     author: "Daniel Kahneman",
     era: "2011",
-    genre: "Cognitive Psychology & Behavioral Economics",
+    genre: "Economics, Business & Strategy",
     oneSentenceSummary: "An elegant tour of the human mind exposes the constant, delicate tension between intuitive, rapid, but bias-prone thinking and slow, deliberate, but highly lazy analytical reasoning.",
     introduction: "Nobel laureate Daniel Kahneman summarizes decades of pioneering research with Amos Tversky, revealing the cognitive biases and heuristics that shape our daily decisions. The text dismantles the traditional 'rational agent' model of classical economics with dry, clinical precision.",
     themes: [
@@ -626,7 +626,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "The Great Gatsby",
     author: "F. Scott Fitzgerald",
     era: "1925",
-    genre: "Modernist Literature & Tragic Social Critique",
+    genre: "Classic Literature & Fiction",
     oneSentenceSummary: "An exquisite critique of the American Dream, where a tragic romantic searches for a green light of the past amid the reckless, hollow excess of New York's 1920s elite.",
     introduction: "Set in the summer of 1922 on long Island's opulent Gold Coast, Fitzgerald’s masterpiece captures the fragile illusions of prosperity, the class systems that dictate American society, and the desperate, doomed effort to replicate bygone memories.",
     themes: [
@@ -687,7 +687,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "War and Peace",
     author: "Leo Tolstoy",
     era: "1869",
-    genre: "Epic Historical Realism & Philosophy of History",
+    genre: "Classic Literature & Fiction",
     oneSentenceSummary: "The fates of five aristocratic families intertwine during Napoleon's invasion of Russia, demonstrating that history is driven not by great leaders, but by the emergent choices of millions of ordinary souls.",
     introduction: "Tolstoy's monumental masterwork transcends the boundaries of traditional fiction. It is a brilliant, granular exploration of early 19th-century Russian society, a historical chronicle of the Napoleonic wars, and a radical, explicit challenge to Great Man theory.",
     themes: [
@@ -748,7 +748,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "Nineteen Eighty-Four",
     author: "George Orwell",
     era: "1949",
-    genre: "Dystopian & Political Fiction",
+    genre: "Classic Literature & Fiction",
     oneSentenceSummary: "In a terrifyingly complete totalitarian superstate, a minor clerk attempts an illegal romance and a quiet intellectual rebellion against a regime that controls memory, language, and reality.",
     introduction: "Orwell's highly prophetic work remains the definitive warning against modern surveillance, psychological manipulation, state-sanctioned historical revisionism, and the total destruction of individual objective truth.",
     themes: [
@@ -809,7 +809,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "SPQR",
     author: "Mary Beard",
     era: "2015",
-    genre: "Ancient History & Historiographical Revisionism",
+    genre: "History, Memoirs & Geopolitics",
     tag: "Tony's List",
     oneSentenceSummary: "A brilliant and witty examination of Ancient Rome’s first millennium, questioning the myths of its foundation, the realities of citizenship, and the complex structures of its imperial power.",
     introduction: "Mary Beard’s 'SPQR' (Senatus Populusque Romanus) provides a critical, revisionist account of Rome's rise. Spanning from its mythic origin as a muddy village to the dramatic point when Emperor Caracalla granted universal Roman citizenship, Beard strips away centuries of romantic propaganda to investigate the daily lives and political realities of the ancient metropolis.",
@@ -871,7 +871,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "The Republic",
     author: "Plato",
     era: "~375 BC",
-    genre: "Classical Philosophy & Political Utopianism",
+    genre: "Philosophy, Politics & Ethics",
     oneSentenceSummary: "A towering Socratic dialogue investigating the nature of justice, the ideal state structured by the tripartite soul, and the philosopher-king's duty to see beyond the shadows of sensory illusions.",
     introduction: "Plato's 'The Republic' is the foundational cornerstone of Western political and philosophical thought. Conceived as a structured conversation led by Socrates, the dialogue seeks to define individual justice by constructing a hypothetical ideal society (Kallipolis), famously introducing the Allegory of the Cave and the concept of the Philosopher-King.",
     themes: [
@@ -932,7 +932,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "Frankenstein",
     author: "Mary Shelley",
     era: "1818",
-    genre: "Gothic Horror & Early Science Fiction",
+    genre: "Classic Literature & Fiction",
     oneSentenceSummary: "A brilliant and haunting warning on the hubris of scientific creation, where an ambitious young scholar plays God and subsequently abandons his monstrous, emotionally sensitive creation.",
     introduction: "Mary Shelley's 'Frankenstein; or, The Modern Prometheus' sits at the dawn of science fiction and the height of Romantic gothic literature. Written during a rainy summer in Switzerland when she was only eighteen, the novel explores the dark boundaries of biology, parental neglect, and the tragic consequences of societal alienation.",
     themes: [
@@ -993,7 +993,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "Meditations",
     author: "Marcus Aurelius",
     era: "~170-180 AD",
-    genre: "Stoic Philosophy & Private Journals",
+    genre: "Philosophy, Politics & Ethics",
     oneSentenceSummary: "The private, unpretentious spiritual reflections of the world's most powerful emperor, reminding himself of the fleeting nature of fame, the duty to serve others, and the absolute sovereignty of the rational mind.",
     introduction: "Written while on military campaign on the Roman northern frontier, 'Meditations' is a series of twelve books of private notes never intended for public eyes. It serves as a raw, honest self-examination, where Marcus Aurelius repeatedly urges himself to practice Stoicism, accept the natural order of the universe (Logos), and maintain inner quietude.",
     themes: [
@@ -1054,7 +1054,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "The Wealth of Nations",
     author: "Adam Smith",
     era: "1776",
-    genre: "Classical Economics & Moral Philosophy",
+    genre: "Economics, Business & Strategy",
     oneSentenceSummary: "An epoch-making treatise on economics proposing that market competition driven by individual self-interest naturally produces societal prosperity and divisions of labor.",
     introduction: "First published in 1776, Adam Smith’s magnum opus laid the conceptual foundation for modern free-market capitalism, analyzing the productivity of division of labor, the concept of the invisible hand, and the structural folly of mercantilist restrictions.",
     themes: [
@@ -1115,7 +1115,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "The General Theory of Employment, Interest and Money",
     author: "John Maynard Keynes",
     era: "1936",
-    genre: "Macroeconomics & Public Policy",
+    genre: "Economics, Business & Strategy",
     oneSentenceSummary: "A revolutionary macroeconomic treatise arguing that supply does not automatically create its own demand, making state-led fiscal intervention crucial to cure chronic economic depressions.",
     introduction: "Written in the shadow of the Great Depression, Keynes's revolutionary book completely upended classical laissez-faire economics, demonstrating that markets can get trapped in prolonged equilibria of underemployment and low aggregate demand.",
     themes: [
@@ -1176,7 +1176,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "The Art of War",
     author: "Sun Tzu",
     era: "~5th Century BC",
-    genre: "Military Strategy & Core Philosophy",
+    genre: "Economics, Business & Strategy",
     oneSentenceSummary: "The definitive ancient manual on conflict, advising that the grandest victories are those won without firing a single shot, using deception, speed, and deep adaptability.",
     introduction: "Attributed to the ancient Chinese general Sun Tzu, this thirteen-chapter classic is not just a tactical field guide, but a profound philosophical exploration of psychological leverage, informational asymmetry, and resource-conserving victory.",
     themes: [
@@ -1237,7 +1237,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "Human Action",
     author: "Ludwig von Mises",
     era: "1949",
-    genre: "Austrian Economics & Praxeology",
+    genre: "Economics, Business & Strategy",
     tag: "Tony's List",
     oneSentenceSummary: "An exhaustive defense of free-market capitalism based on praxeology—the systematic, a priori study of purposeful human behavior and subjective valuation.",
     introduction: "Ludwig von Mises’s monumental treatise is the philosophical peak of the Austrian School of economics. Mises rejects mathematical modeling and positivism, arguing instead that economics is a deductive branch of human action, driven by subjective, individual decisions and coordinate price signals.",
@@ -1299,7 +1299,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "The Next 100 Years",
     author: "George Friedman",
     era: "2009",
-    genre: "Geopolitical Forecasting & Realism",
+    genre: "History, Memoirs & Geopolitics",
     tag: "Tony's List",
     oneSentenceSummary: "A provocative geopolitical forecast of the 21st century, predicting a series of tectonic global shifts, including space weapons, demographic squeezes, and the rise of new regional superpowers.",
     introduction: "Published in 2009, geopolitical analyst George Friedman applies structural realism to lay out a highly speculative, fascinating roadmap of the next century, forecasting the rise of Poland, Turkey, and Japan as crucial global rivals while outlining a technical space-based conflict.",
@@ -1361,7 +1361,7 @@ export const preCuratedBooks: BookSummary[] = [
     title: "1776",
     author: "David McCullough",
     era: "2005",
-    genre: "Narrative History & American Revolution",
+    genre: "History, Memoirs & Geopolitics",
     tag: "Tony's List",
     oneSentenceSummary: "A vivid, deeply human chronicle detailing the perilous, near-fatal year of the American Revolution, where George Washington’s ragtag army survived absolute defeat on the edge of extinction.",
     introduction: "In '1776', David McCullough delivers a masterful, granular, and narrative-driven account of the fateful year that birthed the United States, tracking the agonizing series of military disasters, bitter winters, and thin threads of luck that kept the rebellion alive.",
@@ -1415,6 +1415,191 @@ export const preCuratedBooks: BookSummary[] = [
         text: "Nothing of any consequence was ever accomplished without effort and courage.",
         speaker: "David McCullough (citing historical sentiment)",
         significance: "An elegant, universal summary of the revolutionary era's grueling realities."
+      }
+    ]
+  },
+  {
+    id: "bad-blood",
+    title: "Bad Blood: Secrets and Lies in a Silicon Valley Startup",
+    author: "John Carreyrou",
+    era: "2018",
+    genre: "History, Memoirs & Geopolitics",
+    tag: "Tony's List",
+    oneSentenceSummary: "The gripping, definitive account of the rise and spectacular fall of Theranos, a multibillion-dollar blood-testing startup built on absolute deception and corporate hubris.",
+    introduction: "John Carreyrou’s investigative masterpiece exposes the toxic culture, relentless gaslighting, and technical vaporware of Theranos. Led by Elizabeth Holmes, the company promised to revolutionize medicine but instead risked patient lives in pursuit of vanity and power.",
+    themes: [
+      {
+        name: "Silicon Valley Hubris and Cult of Personality",
+        description: "The dangerous tendency of tech ecosystems to value charismatic founders and lofty narratives over rigorous science, engineering verification, and basic integrity.",
+        quote: "Elizabeth Holmes had a way of looking at you that made you feel you were the most important person in the world, and that her mission was the most noble mission on earth. People wanted to believe."
+      },
+      {
+        name: "The Courage of Whispering Whistleblowers",
+        description: "How young, vulnerable employees defied immense legal threat and personal intimidation from top-tier lawyers to protect patient health by exposing scientific fraud.",
+        quote: "All Tyler wanted was to do the right thing. But in a system run by intimidation, truth became the ultimate threat."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Broken Blood-Analyzer Demonstration",
+        act: "Mid-2010s",
+        description: "When Theranos representatives frantically secretly ran execution tests on commercially-bought competitor machines in a basement lab while pitching investors on their non-functional 'Edison' device upstairs.",
+        impact: "Unmasks the pure theatrical performance and deception at the core of the company's valuation."
+      },
+      {
+        title: "The Defiant Wall Street Journal Publication",
+        act: "October 2015",
+        description: "Despite massive legal threats, surveillance by private investigators, and pressure from famous board members, Carreyrou publishes the first exposé, shattering the billion-dollar illusion.",
+        impact: "Demonstrates the irreplaceable power of independent investigative journalism in policing Silicon Valley's overhyped startups."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "Elizabeth Holmes",
+        role: "The Visionary Charlatan",
+        archetype: "The Self-Deluded Disrupter",
+        analysis: "The mesmerizing, deep-voiced founder whose fanatical self-delusion, imitation of Steve Jobs, and iron-clad willpower successfully swindled some of America's most powerful political and economic leaders."
+      },
+      {
+        name: "Sunny Balwani",
+        role: "The Enforcer",
+        archetype: "The Authoritarian Manager",
+        analysis: "The aggressive, domineering Chief Operating Officer who enforced a culture of absolute terror, extreme paranoia, and silent compartmentalization to keep employees from talking."
+      }
+    ],
+    quotes: [
+      {
+        text: "Faking it until you make it is one thing, but faking it when lives are on the line is a crime.",
+        speaker: "John Carreyrou",
+        significance: "Draws the vital, immutable moral line where creative tech hype becomes criminal negligence."
+      },
+      {
+        text: "He had a bullying style and would frequently accuse people of having 'Theranos DNA' issues if they brought up hard technical constraints.",
+        speaker: "Tyler Shultz",
+        significance: "Exposes how corporate loyalty was weaponized to suppress scientific truth."
+      }
+    ]
+  },
+  {
+    id: "red-notice",
+    title: "Red Notice",
+    author: "Bill Browder",
+    era: "2015",
+    genre: "History, Memoirs & Geopolitics",
+    tag: "Tony's List",
+    oneSentenceSummary: "A high-stakes finance memoir that morphs into a devastating human rights crusade when a hedge fund manager exposes Russian oligarch corruption, leading to the murder of his lawyer.",
+    introduction: "Bill Browder’s 'Red Notice' tracks his transition from a ruthless Hermitage Capital hedge fund manager capitalizing on Russia's chaotic post-Soviet privatizations, to an international human rights activist seeking justice for Sergei Magnitsky, his brilliant, tortured lawyer.",
+    themes: [
+      {
+        name: "The Savage Conjunction of Oligarchy and State",
+        description: "How Russian state institutions, tax authorities, and criminal enterprises operate as a single, coordinated syndicate to plunder assets and eliminate dissidents.",
+        quote: "In Russia, there are no laws. There is only raw executive power, enforced by police acting as armed collection agencies."
+      },
+      {
+        name: "From Capitalist Ambition to Human Rights Crusade",
+        description: "The transformative power of personal responsibility, where financial loss becomes a moral duty to fight global corruption and human rights abuses.",
+        quote: "I was a businessman. But when they killed my friend for doing his job, I had to stop being a businessman."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Shocking Expulsion from Moscow",
+        act: "November 2005",
+        description: "Arriving at Sheremetyevo Airport in 2005, Browder is suddenly detained, declared a national security threat, and expelled, beginning the illegal hostile takeover of his multi-billion dollar fund by corrupt officials.",
+        impact: "Signals the end of Western compliance with Russia's financial lawlessness and the initiation of state-sanctioned corporate raiding."
+      },
+      {
+        title: "Sergei Magnitsky's Martyrdom and the Global Magnitsky Act",
+        act: "November 2009",
+        description: "After 358 days of agonizing detention, denial of medical care, and physical beatings for refusing to sign a false confession, Sergei Magnitsky dies in a Russian isolation cell, inspiring Browder's relentless campaign to pass global asset-freezing legislation in Washington.",
+        impact: "Created a revolutionary new tool of international law targeting individual human rights abusers directly rather than entire nations."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "Sergei Magnitsky",
+        role: "The Incorruptible Martyr",
+        archetype: "The Unsung Hero of Truth",
+        analysis: "The brilliant, quiet, and absolutely incorruptible Russian tax attorney who uncovered a massive $230 million state-tax refund fraud and refused to back down even under torture."
+      },
+      {
+        name: "Bill Browder",
+        role: "The Vengeful Crusader",
+        archetype: "The Finance Renegade",
+        analysis: "An ambitious, aggressive financier who, when confronted with the ultimate moral cost of state corruption, dedicated the rest of his life to weaponizing Western banking systems against Russian oligarchs."
+      }
+    ],
+    quotes: [
+      {
+        text: "If you had told me then that I would go from being a capitalist to a human rights activist, I would have laughed. But then Sergei died.",
+        speaker: "Bill Browder",
+        significance: "Underlines the core change of his identity, transforming an opportunist into a targeted moral campaigner."
+      },
+      {
+        text: "Sergei didn't die for money. He died because he believed in the law, and he believed that the law should protect the innocent.",
+        speaker: "Bill Browder",
+        significance: "Honors the ultimate sacrifice of Magnitsky, emphasizing the profound power of ethical principles in lawless environments."
+      }
+    ]
+  },
+  {
+    id: "atomic-habits",
+    title: "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+    author: "James Clear",
+    era: "2018",
+    genre: "Economics, Business & Strategy",
+    oneSentenceSummary: "A remarkably practical framework for self-improvement explaining how tiny, incremental changes in behavior compounding over time produce massive, life-altering results.",
+    introduction: "James Clear's masterpiece argues that goals are secondary to systems. By understanding how the human brain cycles through cue, craving, response, and reward, individuals can design highly visual, satisfying environments that automate positive habits and dismantle destructive ones.",
+    themes: [
+      {
+        name: "The Power of Compounding Identity",
+        description: "The most effective way to modify long-term behavior is focusing not on what you want to achieve, but on who you wish to become, using discrete actions as recurring 'votes' for that identity.",
+        quote: "True behavior change is not about goals or outcomes; it is a fundamental shift in identity."
+      },
+      {
+        name: "Systems Over Goals Integration",
+        description: "Goals are useful for setting a general direction, but systems are optimal for actually making progress. When you fall to the level of your systems, your environment dictates your ultimate success.",
+        quote: "You do not rise to the level of your goals. You fall to the level of your systems."
+      }
+    ],
+    epicMoments: [
+      {
+        title: "The Aggregation of Marginal Gains Renaissance",
+        act: "2003-2008",
+        description: "Dave Brailsford takes over British Professional Cycling and applies 'the aggregation of marginal gains'—improving every micro-variable (ergonomics, mattress support, handwashing) by just 1%—transforming a century-long joke of a team into a dominant global powerhouse.",
+        impact: "Demonstrates the physical reality of compound improvements in complex, competitive systems."
+      },
+      {
+        title: "Victor Hugo's Forced Environmental Isolation",
+        act: "1830",
+        description: "Faced with an impossible literary deadline for 'The Hunchback of Notre Dame', Victor Hugo collects all his formal outdoor clothing and orders his assistant to lock them away, leaving him only a simple gray shawl to force him to write.",
+        impact: "Vividly illustrates how masterfully restructuring your physical environment overrides the limits of human willpower."
+      }
+    ],
+    characterProfiles: [
+      {
+        name: "Dave Brailsford",
+        role: "The Marginal Gains Architect",
+        archetype: "The Systems Perfectionist",
+        analysis: "A meticulous strategist who rejected grand sweeping changes in favor of exhausting, discrete 1% adjustments across every possible facet of performance."
+      },
+      {
+        name: "The Habit Loop Enthusiast",
+        role: "The Behavioral Engineer",
+        archetype: "The Environmental Designer",
+        analysis: "An individual who stops relying on pure willpower and instead proactively engineers visual cues, reduces friction of target actions, and creates immediate rewards."
+      }
+    ],
+    quotes: [
+      {
+        text: "Every action you take is a vote for the type of person you wish to become. No single instance will transform your beliefs, but as the votes build up, so does the evidence of your new identity.",
+        speaker: "James Clear",
+        significance: "Reframes a simple daily habit from a trivial chore into a profound existential vote of character."
+      },
+      {
+        text: "Be the designer of your world and not merely the consumer of it.",
+        speaker: "James Clear",
+        significance: "Encourages spatial agentic freedom over automatic behavioral compliance with whatever setup exists."
       }
     ]
   }
