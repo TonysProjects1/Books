@@ -198,40 +198,41 @@ export default function App() {
   // Dynamic theme mapping based on isDarkMode state
   const theme = {
     bg: isDarkMode
-      ? "bg-[#14110E] text-[#D4CBBF] selection:bg-[#4E2B2E] selection:text-[#FFFDFB]"
-      : "bg-[#FAF6F0] text-[#2C241E] selection:bg-[#EAE1D4] selection:text-[#5C1D24]",
-    accentBg: isDarkMode ? "bg-[#C43D4F]" : "bg-[#8E2835]",
-    textAccent: isDarkMode ? "text-[#E05C6E]" : "text-[#8E2835]",
-    textAccentHover: isDarkMode ? "hover:text-[#F77C8D]" : "hover:text-[#5C1D24]",
-    textAccentClassic: isDarkMode ? "text-[#E05C6E] md:text-base font-serif font-medium italic" : "text-sm md:text-base font-serif text-[#8E2835] font-medium italic",
+      ? "bg-[#0B0F19] text-[#E2E8F0] selection:bg-[#3B82F6]/30 selection:text-[#F8FAFC]"
+      : "bg-[#F8FAFC] text-[#1E293B] selection:bg-[#DBEAFE] selection:text-[#1E40AF]",
+    accentBg: isDarkMode ? "bg-[#3B82F6]" : "bg-[#2563EB]",
+    borderAccent: isDarkMode ? "border-[#3B82F6]" : "border-[#2563EB]",
+    textAccent: isDarkMode ? "text-[#60A5FA]" : "text-[#2563EB]",
+    textAccentHover: isDarkMode ? "hover:text-[#93C5FD]" : "hover:text-[#1D4ED8]",
+    textAccentClassic: isDarkMode ? "text-[#60A5FA] md:text-base font-serif font-medium italic" : "text-sm md:text-base font-serif text-[#2563EB] font-medium italic",
     cardBg: isDarkMode
-      ? "bg-[#1E1915] border-[#2C251F] shadow-md shadow-[#0F0A07]/50"
-      : "bg-[#FFFDFB] border-[#ECE1D4] shadow-sm",
+      ? "bg-[#111827] border-[#1F2937] shadow-lg shadow-[#020617]/50"
+      : "bg-white border-[#E2E8F0] shadow-sm",
     articleBg: isDarkMode 
-      ? "bg-[#1D1814] border-[#2C251F] shadow-md shadow-[#0F0A07]/50" 
-      : "bg-white border-[#ECE1D4] shadow-sm",
+      ? "bg-[#111827] border-[#1F2937] shadow-lg shadow-[#020617]/50" 
+      : "bg-white border-[#E2E8F0] shadow-sm",
     inputBg: isDarkMode
-      ? "bg-[#14110E] border-[#2C251F] text-[#FAF6F0] focus:ring-[#E05C6E]"
-      : "bg-[#FAF6F0] border-[#ECE1D4] text-[#2C241E] focus:ring-[#8E2835]",
-    headingColor: isDarkMode ? "text-[#FAF5EE]" : "text-[#1A130E]",
-    textColorPrimary: isDarkMode ? "text-[#FAF5EE]" : "text-[#2C241E]",
-    textColorSecondary: isDarkMode ? "text-[#C2B7A8]" : "text-neutral-800",
-    textSub: isDarkMode ? "text-[#B0A493]" : "text-neutral-600",
-    textMuted: isDarkMode ? "text-neutral-400" : "text-neutral-500",
-    blockquoteBg: isDarkMode ? "bg-[#251F1A] text-[#D9CFC1]" : "bg-[#FAF6F0] text-neutral-700",
+      ? "bg-[#0B0F19] border-[#374151] text-[#F8FAFC] focus:ring-[#3B82F6]"
+      : "bg-white border-[#CBD5E1] text-[#0F172A] focus:ring-[#2563EB]",
+    headingColor: isDarkMode ? "text-[#F8FAFC]" : "text-[#0F172A]",
+    textColorPrimary: isDarkMode ? "text-[#F8FAFC]" : "text-[#0F172A]",
+    textColorSecondary: isDarkMode ? "text-[#CBD5E1]" : "text-[#334155]",
+    textSub: isDarkMode ? "text-[#94A3B8]" : "text-[#475569]",
+    textMuted: isDarkMode ? "text-[#64748B]" : "text-[#94A3B8]",
+    blockquoteBg: isDarkMode ? "bg-[#1E293B]/50 text-[#CBD5E1]" : "bg-[#F1F5F9] text-[#334155]",
     climaxCardBg: isDarkMode
-      ? "bg-[#241F1A] border-[#2E2721]"
-      : "bg-[#FAF6F0]/60 border-[#ECE1D4]/40",
-    charCardBorder: isDarkMode ? "border-[#2A231D]" : "border-[#FAF6F0]",
-    borderDotted: isDarkMode ? "border-[#2C251F]" : "border-[#E5DAC9]",
+      ? "bg-[#1E293B]/30 border-[#334155]"
+      : "bg-[#F8FAFC] border-[#E2E8F0]",
+    charCardBorder: isDarkMode ? "border-[#334155]" : "border-[#E2E8F0]",
+    borderDotted: isDarkMode ? "border-[#334155]" : "border-[#CBD5E1]",
     badgeGenreBg: isDarkMode
-      ? "bg-[#291A1C] text-[#E05C6E] border border-[#4D2428]"
-      : "bg-[#FAF6F0] text-[#8E2835] border border-[#ECDCCB]",
-    borderLight: isDarkMode ? "border-[#251F1A]" : "border-[#FAF6F0]",
-    borderMedium: isDarkMode ? "border-[#2C251F]" : "border-[#ECE1D4]",
+      ? "bg-[#1E293B] text-[#60A5FA] border border-[#334155]"
+      : "bg-[#EFF6FF] text-[#1D4ED8] border border-[#BFDBFE]",
+    borderLight: isDarkMode ? "border-[#1F2937]" : "border-[#F1F5F9]",
+    borderMedium: isDarkMode ? "border-[#374151]" : "border-[#E2E8F0]",
     returnBtn: isDarkMode
-      ? "bg-[#C43D4F] text-white hover:bg-[#D64F62]"
-      : "bg-[#8E2835] text-white hover:bg-[#72202A]"
+      ? "bg-[#3B82F6] text-white hover:bg-[#2563EB]"
+      : "bg-[#2563EB] text-white hover:bg-[#1D4ED8]"
   };
 
   return (
@@ -251,7 +252,7 @@ export default function App() {
               <button
                 onClick={toggleDarkMode}
                 className={`p-1.5 rounded-full transition-colors flex items-center justify-center cursor-pointer ${
-                  isDarkMode ? "hover:bg-[#251F1A] text-[#E05C6E]" : "hover:bg-neutral-200/50 text-[#8E2835]"
+                  isDarkMode ? "hover:bg-slate-800 text-blue-400" : "hover:bg-slate-100 text-blue-600"
                 }`}
                 title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
               >
@@ -358,8 +359,8 @@ export default function App() {
                disabled={isLoading || !searchQuery.trim()}
                className={`px-5 py-2.5 rounded text-sm font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
                  isLoading || !searchQuery.trim()
-                   ? (isDarkMode ? "bg-neutral-800 text-neutral-500 cursor-not-allowed" : "bg-neutral-200 text-neutral-500 cursor-not-allowed")
-                   : (isDarkMode ? "bg-[#C43D4F] text-white hover:bg-[#D64F62]" : "bg-[#8E2835] text-white hover:bg-[#72202A]")
+                   ? (isDarkMode ? "bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700/50" : "bg-slate-100 text-slate-400 cursor-not-allowed border border-neutral-200")
+                   : (isDarkMode ? "bg-blue-600 text-white hover:bg-blue-500" : "bg-blue-600 text-white hover:bg-blue-700")
                }`}
             >
               {isLoading ? (
@@ -447,7 +448,7 @@ export default function App() {
 
               {/* SECTION I: SUMMARY OF THE ENTIRE BOOK */}
               <section className="space-y-4">
-                <h4 className={`font-serif font-bold text-lg ${theme.headingColor} tracking-tight border-l-3 ${theme.accentBg} pl-3`}>
+                <h4 className={`font-serif font-bold text-lg ${theme.headingColor} tracking-tight border-l-3 ${theme.borderAccent} pl-3`}>
                   Summary of the Entire Book
                 </h4>
                 
@@ -553,7 +554,7 @@ export default function App() {
 
                     <div className="space-y-3">
                       {book.quotes.map((quote) => (
-                        <div key={quote.text} className={`border-l-2 ${theme.accentBg} pl-4 space-y-1`}>
+                        <div key={quote.text} className={`border-l-2 ${theme.borderAccent} pl-4 space-y-1`}>
                           <p className={`font-serif text-xs md:text-sm italic ${theme.textColorSecondary} leading-relaxed`}>
                             &ldquo;{quote.text}&rdquo;
                           </p>
